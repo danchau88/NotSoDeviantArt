@@ -1,2 +1,0 @@
-# NotSoDeviantArt
-deviantart.com clone
