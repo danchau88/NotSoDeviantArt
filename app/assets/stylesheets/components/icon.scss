@@ -1,0 +1,14 @@
+.fa-search {
+    padding: 10px 30px;
+    background-color: black;
+    color: $readable-gray;
+    border: none;
+    font-family: 'Kanit', sans-serif;
+    font-size: 14px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.fa-search:hover {
+    color: $kinda-white;
+}

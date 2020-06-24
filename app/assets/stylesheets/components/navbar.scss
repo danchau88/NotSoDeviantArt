@@ -4,7 +4,7 @@
     background-color: $pretty-black;
 }
 
-.nav-left {
+.nav-left h1 {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -14,7 +14,9 @@
     letter-spacing: 1.3px;
 }
 
-
+.nav-left h1:hover {
+    color: $deviant-green;
+}
 
 .nav-right header {
     display: flex;
@@ -25,10 +27,3 @@
     color: $kinda-white;
 }
 
-.logged-in {
-    font-family: sans-serif;
-    font-weight: bold;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}

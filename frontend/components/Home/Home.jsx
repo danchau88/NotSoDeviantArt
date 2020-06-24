@@ -5,7 +5,9 @@ export default ({currentUser, logout}) => {
     const display = currentUser ? (
         <div className='logged-in'>
            <h3>{currentUser.username}</h3>
-           <button className='nav-button' onClick={logout}>LOG OUT</button>
+           <div className='dropdown-content'>
+                <button className='drop-button' onClick={logout}>LOG OUT</button>
+           </div>
         </div>
     ) : (
         <div>
@@ -19,7 +21,20 @@ export default ({currentUser, logout}) => {
     );
     return (
         <header className='nav-right-content'>
+
             {display}
+
+            {/* Submission section for the deviations */}
+            <div className="dropdown">
+                <button className="submission-btn">SUBMIT</button>
+                <div className='dropdown-content'>
+                    <button>DEVIATION</button>
+                    <button>NOTE</button>
+                    <button>COMMENT</button>
+                </div>
+            </div>
+            {/* Submission section for the deviations */}
+
         </header>
     );
 };

@@ -13,6 +13,9 @@ const App = () => (
       <Link to='/'>
         <h1>NotSoDeviantArt</h1>
       </Link>
+      <button className='nav-button'>
+        <i class="fas fa-search">{' SEARCH'}</i>
+      </button>
     </header> 
     <div className='nav-right'>
     <Route exact path='/' component={HomeContainer} />

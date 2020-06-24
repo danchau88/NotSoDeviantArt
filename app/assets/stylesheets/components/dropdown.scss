@@ -1,0 +1,74 @@
+.logged-in {
+    position: relative;
+    display: inline-block;
+    cursor: default;
+}
+
+.logged-in:hover {
+    color: $aqua-green-accent;
+    background-color: $kinda-white;
+    width: 60px;
+}
+
+.logged-in h3 {
+    font-family: 'Odibee Sans', cursive;
+    font-weight: bolder;
+    letter-spacing: 1.5px;
+    font-size: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logged-in:hover h3 {
+    padding: 5px;
+    border-bottom: 2px solid $aqua-green-accent;
+}
+
+.submission-btn {
+    padding: 10px;
+    border: none;
+    color: $deviant-green;
+    background-color: $pretty-black;
+    font-family: 'Kanit', sans-serif;
+    font-weight: bold;
+    padding: 13px;
+}
+
+.dropdown:hover .submission-btn {
+    color: $pretty-black;
+    background-color: $kinda-white;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    cursor: default;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: $kinda-white;
+    color: $pretty-black;
+    min-width: 150px;
+    box-shadow: 0px 8px 16px 0px $translucent-light-green;
+    z-index: 1;
+}
+
+.dropdown:hover > .dropdown-content {
+    display: block;
+}
+
+.logged-in:hover > .dropdown-content{
+    display: block;
+}
+
+.dropdown-content button {
+    cursor: pointer;
+}
+
+.logged-in button {
+    cursor: pointer;
+}

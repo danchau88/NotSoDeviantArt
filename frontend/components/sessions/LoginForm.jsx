@@ -77,7 +77,7 @@ class LoginForm extends React.Component{
                     <span 
                         className='exit-btn'
                         onClick={this.handleExit}
-                    >X</span>
+                    >x</span>
                     <ul className='errors'>
                         {displayErrors}
                     </ul>
