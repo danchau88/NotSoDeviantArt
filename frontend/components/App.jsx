@@ -10,14 +10,9 @@ import {AuthRoute} from './../util/route_util'
 const App = () => (
   <div className='navbar'>
     <header className='nav-left'> 
-      <Link>
+      <Link to='/'>
         <h1>NotSoDeviantArt</h1>
       </Link>
-      <div className='home-button'>
-        <Link to='/'>
-          <button className='nav-button'>HOME</button>
-        </Link>
-      </div>
     </header> 
     <div className='nav-right'>
     <Route exact path='/' component={HomeContainer} />

@@ -3,7 +3,8 @@
     background-color: black;
     color: white;
     border: none;
-    font-family: sans-serif;
+    font-family: 'Kanit', sans-serif;
+    font-size: 14px;
     font-weight: bolder;
     cursor: pointer;
 }
@@ -40,9 +41,4 @@
     color: $pretty-black;
     border: none;
     cursor: pointer;
-}
-
-.home-title {
-    color: $deviant-green;
-    font-weight: bolder;
 }

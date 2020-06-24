@@ -10,6 +10,7 @@
 }
 
 .form-left {
+    position: relative;
     color: $kinda-white;
     padding: $form-padding;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -20,7 +21,28 @@
     flex-wrap: wrap;
     justify-content: $form-justify-content;
     align-items: center;
-    background-color: $dirty-dark-aqua;
+}
+
+// This was to make on the background opacity, not whole form
+.form-left::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: url('space_whale.png');
+    background-size: 1000px 625px;
+    opacity: 0.7;
+    z-index: -1;
+}
+
+.form-left h2 {
+    font-family: 'Odibee Sans', cursive;
+    font-size: 34px;
+    letter-spacing: 1.3px;
+    font-weight: bolder;
+    color: $aqua-green-accent;
 }
 
 .form-right {
@@ -36,9 +58,12 @@
     flex-direction: $form-flex-direction;
 }
 
+
 .form-right header {
     color: $dirty-dark-aqua;
-    font-weight: bold;
+    font-weight: bolder;
+    font-family: 'Kanit', sans-serif;
+    font-size: 18px;
 }
 
 .form-right label {

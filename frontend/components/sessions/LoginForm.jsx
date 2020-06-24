@@ -25,7 +25,6 @@ class LoginForm extends React.Component{
     }
 
     handleExit(){
-        // console.log(this.props.history)
         this.props.history.goBack()
     }
 
