@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 
 class SignupForm extends React.Component{
     constructor(props) {
@@ -11,6 +11,7 @@ class SignupForm extends React.Component{
             DOB: ''
         };
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleExit = this.handleExit.bind(this);
     }
     
     handleInput(type) {
@@ -23,6 +24,10 @@ class SignupForm extends React.Component{
         e.preventDefault();
         const user = Object.assign({}, this.state);
         this.props.processForm(user);
+    }
+
+    handleExit(){
+        this.props.history.goBack()
     }
 
     render(){
@@ -85,9 +90,10 @@ class SignupForm extends React.Component{
                         <br/>
                         <button className='form-submit'>JOIN</button>
                     </form>
-                    <Link to='/'>
-                        <span className='exit-btn'>X</span>
-                    </Link>
+                    <span 
+                        className='exit-btn' 
+                        onClick={this.handleExit}
+                    >X</span>
                     <ul className='errors'>
                         {displayErrors}
                     </ul>
@@ -97,4 +103,4 @@ class SignupForm extends React.Component{
     }
 }
 
-export default SignupForm;
+export default withRouter(SignupForm);

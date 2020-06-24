@@ -10,9 +10,9 @@ import {AuthRoute} from './../util/route_util'
 const App = () => (
   <div className='navbar'>
     <header className='nav-left'> 
-      <h1>
-        NotSoDeviantArt
-      </h1>
+      <Link>
+        <h1>NotSoDeviantArt</h1>
+      </Link>
       <div className='home-button'>
         <Link to='/'>
           <button className='nav-button'>HOME</button>

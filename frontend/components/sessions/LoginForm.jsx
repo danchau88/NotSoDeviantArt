@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 
 class LoginForm extends React.Component{
     constructor(props) {
@@ -9,6 +9,7 @@ class LoginForm extends React.Component{
             password: '',
         };
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleExit = this.handleExit.bind(this);
     }
 
     handleInput(type) {
@@ -21,6 +22,11 @@ class LoginForm extends React.Component{
         e.preventDefault();
         const user = Object.assign({}, this.state);
         this.props.processForm(user);
+    }
+
+    handleExit(){
+        // console.log(this.props.history)
+        this.props.history.goBack()
     }
 
     render(){
@@ -69,9 +75,10 @@ class LoginForm extends React.Component{
                         <br/>
                         <button className='form-submit'>LOG IN</button>
                     </form>
-                    <Link to='/'>
-                        <span className='exit-btn'>X</span>
-                    </Link>
+                    <span 
+                        className='exit-btn'
+                        onClick={this.handleExit}
+                    >X</span>
                     <ul className='errors'>
                         {displayErrors}
                     </ul>
@@ -81,4 +88,4 @@ class LoginForm extends React.Component{
     }
 }
 
-export default LoginForm;
+export default withRouter(LoginForm);
