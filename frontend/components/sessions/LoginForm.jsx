@@ -28,7 +28,7 @@ class LoginForm extends React.Component{
             <li key={index}>{error}</li>
         ));
         return(
-            <div>
+            <div className='login'> 
                 <header>
                     <h2>Log In</h2>
                     <br/>

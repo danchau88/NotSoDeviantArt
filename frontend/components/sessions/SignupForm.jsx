@@ -30,7 +30,7 @@ class SignupForm extends React.Component{
             <li key={index}>{error}</li>
         ));
         return(
-            <div>
+            <div className='signup'>
                 <header>
                     <h2>Join NotSoDeviantArt</h2>
                     <br/>

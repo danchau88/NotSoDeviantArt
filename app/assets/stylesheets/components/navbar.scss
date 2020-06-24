@@ -1,5 +1,21 @@
 .navbar {
     display: flex;
     justify-content: space-between;
-    background-color: green;
+    background-color: $pretty-black;
+}
+
+.nav-left {
+    display: flex;
+    justify-content: flex-start;
+    color: $kinda-white;
+    padding: 10px;
+}
+
+
+
+.nav-right header {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px;
+    color: $kinda-white;
 }

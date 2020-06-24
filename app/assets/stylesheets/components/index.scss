@@ -10,3 +10,9 @@ $readable-gray: #CED0CE;
 
 //NavBar
 @import 'navbar';
+@import 'login';
+@import 'signup';
+
+body {
+    background-color: $pretty-black;
+}

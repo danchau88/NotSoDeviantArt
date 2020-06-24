@@ -3,25 +3,19 @@ import {Link} from 'react-router-dom';
 
 export default ({currentUser, logout}) => {
     const display = currentUser ? (
-        <div className='navbar-user'>
+        <div className='logged-in'>
            <h3>{currentUser.username}</h3>
-           <br/>
            <button className='logout' onClick={logout}>LOG OUT</button>
         </div>
     ) : (
-        <div className='navbar-nonuser'>
+        <div>
             <Link to='/signup'>JOIN</Link>
-            <br/>
             <Link to='/login'>LOG IN</Link>
-            <br/>
         </div>
     );
     return (
-        <header className="navbar">
-            <div className='nav-content'>
-                {display}
-                <Link to='/'>HOME</Link>
-            </div>
+        <header className='nav-right-content'>
+            {display}
         </header>
     );
 };
