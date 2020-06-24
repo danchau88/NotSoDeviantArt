@@ -24,17 +24,28 @@ class LoginForm extends React.Component{
     }
 
     render(){
+        const leftDisplay = (
+            <div className='form-left'>
+                <Link className='home-title' to='/'><h2>NotSoDeviantArt</h2></Link>
+                <h1>JOIN THE LARGEST ART COMMUNITY IN THE WORLD</h1>
+            </div>
+        )
+
         const displayErrors = this.props.errors.map((error, index) => (
             <li key={index}>{error}</li>
         ));
+
         return(
-            <div className='login-bg'>
-                <div className='login'>
+            <div className='form-bg'>
+
+                {leftDisplay}
+
+                <div className='form-right'>
                     <header>
                         <h2>Log In</h2>
                     </header>
                     <div className='toggle-link'>
-                        <p>{'Become a deviant. '} 
+                        <p>{'Become a NSdeviant. '} 
                         <Link to='/signup'>Join</Link>
                         </p>
                     </div>

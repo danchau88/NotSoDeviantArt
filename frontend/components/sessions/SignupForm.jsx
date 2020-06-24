@@ -26,16 +26,22 @@ class SignupForm extends React.Component{
     }
 
     render(){
+        const leftDisplay = (
+            <div className='form-left'>
+                <Link className='home-title' to='/'><h2>NotSoDeviantArt</h2></Link>
+                <h1>JOIN THE LARGEST ART COMMUNITY IN THE WORLD</h1>
+            </div>
+        )    
         const displayErrors = this.props.errors.map((error, index) => (
             <li key={index}>{error}</li>
         ));
-        const submitButton = <button className='make-button'></button>
+        
         return(
-            <div className='signup-bg'>
-                <div className='signup-left'>
-                    <h1>JOIN THE LARGEST ART COMMUNITY IN THE WORLD</h1>
-                </div>
-                <div className='signup-right'>
+            <div className='form-bg'>
+
+                {leftDisplay}
+
+                <div className='form-right'>
                     <header>
                         <h2>Join NotSoDeviantArt</h2>
                     </header>

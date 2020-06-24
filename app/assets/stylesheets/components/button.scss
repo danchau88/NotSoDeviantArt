@@ -13,7 +13,7 @@
     justify-content: center;
     font-family: sans-serif;
     font-weight: bold;
-    font-size: small;
+    font-size: 14px;
 }
 
 .exit-btn {
@@ -33,11 +33,16 @@
     width: 120px;
     height: 54px;
     margin: 10px;
-    font-weight: bold;
+    font-weight: bolder;
     font-size: 11px;
     line-height: 1.22;
     letter-spacing: 1.3px;
     color: $pretty-black;
     border: none;
     cursor: pointer;
+}
+
+.home-title {
+    color: $deviant-green;
+    font-weight: bolder;
 }

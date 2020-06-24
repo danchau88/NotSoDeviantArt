@@ -8,8 +8,8 @@ $readable-gray: #87919E;
 
 //My Login/Signup Form elements
 $form-width: 30%;
-$form-height: 90%;
-$form-padding: 10px;
+$form-height: 100%;
+$form-padding: 20px;
 $form-family: sans-serif;
 $form-display: flex;
 $form-justify-content: space-evenly;
@@ -20,13 +20,14 @@ $form-description-weight: bold;
 $input-font-size: 16px;
 $input-width: 300px; 
 $input-height: 30px; 
+
+
 //Home
 // @import 'home';
 
 //NavBar
 @import 'navbar';
-@import 'login';
-@import 'signup';
+@import 'form';
 @import 'button';
 
 body {
