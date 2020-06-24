@@ -1,0 +1,43 @@
+.nav-button {
+    padding: 10px 30px;
+    background-color: black;
+    color: white;
+    border: none;
+    font-family: sans-serif;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.toggle-link {
+    display: flex;
+    justify-content: center;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: small;
+}
+
+.exit-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+// .make-button {
+
+// }
+
+.form-submit {
+    background-color: $deviant-green;
+    width: 120px;
+    height: 54px;
+    margin: 10px;
+    font-weight: bold;
+    font-size: 11px;
+    line-height: 1.22;
+    letter-spacing: 1.3px;
+    color: $pretty-black;
+    border: none;
+    cursor: pointer;
+}

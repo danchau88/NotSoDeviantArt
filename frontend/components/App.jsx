@@ -14,7 +14,9 @@ const App = () => (
         NotSoDeviantArt
       </h1>
       <div className='home-button'>
-        <Link to='/'>HOME</Link>
+        <Link to='/'>
+          <button className='nav-button'>HOME</button>
+        </Link>
       </div>
     </header> 
     <div className='nav-right'>

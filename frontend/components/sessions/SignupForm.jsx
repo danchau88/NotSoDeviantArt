@@ -29,53 +29,63 @@ class SignupForm extends React.Component{
         const displayErrors = this.props.errors.map((error, index) => (
             <li key={index}>{error}</li>
         ));
+        const submitButton = <button className='make-button'></button>
         return(
-            <div className='signup'>
-                <header>
-                    <h2>Join NotSoDeviantArt</h2>
+            <div className='signup-bg'>
+                <div className='signup-left'>
+                    <h1>JOIN THE LARGEST ART COMMUNITY IN THE WORLD</h1>
+                </div>
+                <div className='signup-right'>
+                    <header>
+                        <h2>Join NotSoDeviantArt</h2>
+                    </header>
+                    <div className='toggle-link'>
+                        <p>{'Already a NSdeviant? '}
+                        <Link to='/login'>Login</Link>
+                        </p>
+                    </div>
                     <br/>
-                    <p>Already a NSdeviant?
-                        <Link to='/login'>Log In</Link>
-                    </p>
-                </header>
-                <br/>
-                <form onSubmit={this.handleSubmit}>
-                    <label>Pick a username
+                    <form onSubmit={this.handleSubmit}>
+                        <label>Pick a username </label>
+                        <br/>
                         <input 
-                          type="text" 
-                          value={this.state.username}
-                          onChange={this.handleInput('username')} 
+                            type="text" 
+                            value={this.state.username}
+                            onChange={this.handleInput('username')} 
                         />
-                    </label>
-                    <br/>
-                    <label>Add your email
+                        <br/>
+                        <label>Add your email</label>
+                        <br/>
                         <input 
-                          type="text" 
-                          value={this.state.email}
-                          onChange={this.handleInput('email')} 
+                            type="text" 
+                            value={this.state.email}
+                            onChange={this.handleInput('email')} 
                         />
-                    </label>
-                    <br/>
-                    <label>Choose a password
+                        <br/>
+                        <label>Choose a password</label>
+                        <br/>
                         <input 
-                          type="password" 
-                          value={this.state.password}
-                          onChange={this.handleInput('password')} 
+                            type="password" 
+                            value={this.state.password}
+                            onChange={this.handleInput('password')} 
                         />
-                    </label>
-                    <br/>
-                    <label>Date of Birth
+                        <br/>
+                        <label>Date of Birth</label>
+                        <br/>
                         <input 
                             type="date"
                             onChange={this.handleInput('DOB')}
                         />
-                    </label>
-                    <br/>
-                    <button>JOIN</button>
-                </form>
-                <ul className='errors'>
-                    {displayErrors}
-                </ul>
+                        <br/>
+                        <button className='form-submit'>JOIN</button>
+                    </form>
+                    <Link to='/'>
+                        <span className='exit-btn'>X</span>
+                    </Link>
+                    <ul className='errors'>
+                        {displayErrors}
+                    </ul>
+                </div>
             </div>
         )
     }

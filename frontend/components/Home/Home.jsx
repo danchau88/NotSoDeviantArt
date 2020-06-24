@@ -5,12 +5,16 @@ export default ({currentUser, logout}) => {
     const display = currentUser ? (
         <div className='logged-in'>
            <h3>{currentUser.username}</h3>
-           <button className='logout' onClick={logout}>LOG OUT</button>
+           <button className='nav-button' onClick={logout}>LOG OUT</button>
         </div>
     ) : (
         <div>
-            <Link to='/signup'>JOIN</Link>
-            <Link to='/login'>LOG IN</Link>
+            <Link to='/signup'>
+                <button className='nav-button'>JOIN</button>
+            </Link>
+            <Link to='/login'>
+                <button className='nav-button'>LOG IN</button>
+            </Link>
         </div>
     );
     return (

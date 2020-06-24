@@ -28,37 +28,43 @@ class LoginForm extends React.Component{
             <li key={index}>{error}</li>
         ));
         return(
-            <div className='login'> 
-                <header>
-                    <h2>Log In</h2>
-                    <br/>
-                    <p>Become a deviant.
+            <div className='login-bg'>
+                <div className='login'>
+                    <header>
+                        <h2>Log In</h2>
+                    </header>
+                    <div className='toggle-link'>
+                        <p>{'Become a deviant. '} 
                         <Link to='/signup'>Join</Link>
-                    </p>
-                </header>
-                <br/>
-                <form onSubmit={this.handleSubmit}>
-                    <label>Username
+                        </p>
+                    </div>
+                    <br/>
+                    <form onSubmit={this.handleSubmit}>
+                        <label>Username</label>
+                        <br/>  
                         <input 
                             type="text" 
                             value={this.state.username}
                             onChange={this.handleInput('username')} 
-                        />
-                    </label>    
-                    <br/>
-                    <label>Password
+                        />  
+                        <br/>
+                        <label>Password</label>
+                        <br/>
                         <input 
                             type="password"
                             value={this.state.password}
                             onChange={this.handleInput('password')}
                         />
-                    </label>
-                    <br/>
-                    <button>LOG IN</button>
-                </form>
-                <ul className='errors'>
-                    {displayErrors}
-                </ul>
+                        <br/>
+                        <button className='form-submit'>LOG IN</button>
+                    </form>
+                    <Link to='/'>
+                        <span className='exit-btn'>X</span>
+                    </Link>
+                    <ul className='errors'>
+                        {displayErrors}
+                    </ul>
+                </div>
             </div>
         )
     }

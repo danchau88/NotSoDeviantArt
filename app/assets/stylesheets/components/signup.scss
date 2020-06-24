@@ -1,7 +1,55 @@
-.signup {
-    background-color: $translucent-light-green;
+.signup-bg{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
 }
 
-.signup header {
+.signup-left {
+    color: $kinda-white;
+    padding: $form-padding;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder;
+    width: 30%;
+    height: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: $dirty-dark-aqua;
+}
+
+.signup-right {
+    padding: $form-padding;
+    position: relative;
+    background-color: $kinda-white;
+    font-family: $form-family;
+    width: $form-width;
+    height: $form-height;
+    display: $form-display;
+    justify-content: center;
+    float: right;
+    align-items: $form-align-items;
+    flex-direction: $form-flex-direction;
+}
+
+.signup-right header {
     color: $dirty-dark-aqua;
+    font-weight: bold;
+}
+
+.signup-right label {
+    font-weight: $form-description-weight;
+    font-size: $form-description-size;
+    color: $readable-gray;
+}
+
+.signup-right input {
+    width: $input-width;
+    height: $input-height;
+    font-size: $input-font-size;
 }

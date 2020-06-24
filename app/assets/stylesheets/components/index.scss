@@ -1,10 +1,25 @@
+//My Colors
 $translucent-light-green: #D3F8E2;
 $pretty-black: #0D0C1D;
 $kinda-white: #F7F7F2;
 $deviant-green: #7CF0BD;
 $dirty-dark-aqua: #084C61;
-$readable-gray: #CED0CE;
+$readable-gray: #87919E;
 
+//My Login/Signup Form elements
+$form-width: 30%;
+$form-height: 90%;
+$form-padding: 10px;
+$form-family: sans-serif;
+$form-display: flex;
+$form-justify-content: space-evenly;
+$form-align-items: center;
+$form-flex-direction: column;
+$form-description-size: 11px;
+$form-description-weight: bold;
+$input-font-size: 16px;
+$input-width: 300px; 
+$input-height: 30px; 
 //Home
 // @import 'home';
 
@@ -12,6 +27,7 @@ $readable-gray: #CED0CE;
 @import 'navbar';
 @import 'login';
 @import 'signup';
+@import 'button';
 
 body {
     background-color: $pretty-black;

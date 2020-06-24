@@ -6,7 +6,8 @@
 
 .nav-left {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-evenly;
+    align-items: center;
     color: $kinda-white;
     padding: 10px;
 }
@@ -16,6 +17,16 @@
 .nav-right header {
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
+    margin: 10px;
     padding: 20px;
     color: $kinda-white;
+}
+
+.logged-in {
+    font-family: sans-serif;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
