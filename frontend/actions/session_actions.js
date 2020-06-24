@@ -8,7 +8,7 @@ export const RECEIVE_SESSION_ERRORS = "RECEIVE_SESSION_ERRORS"
 export const receiveCurrentUser = (user) =>{
     return {
         type: RECEIVE_CURRENT_USER ,
-        user: user
+        user
     }
 }
 
@@ -19,9 +19,10 @@ export const logoutCurrentUser = () => {
 };
 
 export const receiveErrors = (errors) => {
+    // debugger
     return {
         type: RECEIVE_SESSION_ERRORS,
-        errors: errors
+        errors
     }
 }
 
