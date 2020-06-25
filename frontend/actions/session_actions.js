@@ -26,7 +26,7 @@ export const receiveErrors = (errors) => {
 }
 
 export const login = (user) => (dispatch) => postSession(user)
-    .then( res=> dispatch(receiveCurrentUser(res)))
+    .then(res => dispatch(receiveCurrentUser(res)))
     .fail((errors) => dispatch(receiveErrors(errors.responseJSON))); 
 
 
@@ -36,4 +36,12 @@ export const signup = (user) => (dispatch) => postUser(user)
 
 export const logout = () => (dispatch) => deleteSession()
     .then(() => dispatch(logoutCurrentUser()))
-    .fail((errors) => dispatch(receiveErrors(errors.responseJSON))); 
+    .fail((errors) => dispatch(receiveErrors(errors.responseJSON)));
+
+export const demoUser = () => dispatch => {
+    let guest = {username: 'Guest', password: 'password'};
+    return postSession(guest)
+    .then( res => dispatch(receiveCurrentUser(res)))
+    .fail((errors) => dispatch(receiveErrors(errors.responseJSON)));
+};
+    

@@ -48,6 +48,10 @@
 // .make-button {
 
 // }
+.dropdown:hover #more {
+    background-color: $kinda-white;
+    color: $pretty-black;
+}
 
 .form-submit {
     background-color: $deviant-green;

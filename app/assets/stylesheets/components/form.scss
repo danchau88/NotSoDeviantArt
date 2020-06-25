@@ -31,7 +31,8 @@
     right: 0;
     left: 0;
     bottom: 0;
-    background: url('space_whale.png');
+    //use asset-url for heroku
+    background: asset-url('space_whale.png');
     background-size: 1000px 625px;
     opacity: 0.7;
     z-index: -1;

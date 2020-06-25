@@ -11,9 +11,9 @@
     align-items: center;
 }
 
-.nav-left h1 {
+.nav-left a {
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: row;
     align-items: center;
     color: $kinda-white;
     padding: 10px;
@@ -21,7 +21,7 @@
     letter-spacing: 1.3px;
 }
 
-.nav-left h1:hover {
+.nav-left a:hover {
     color: $deviant-green;
 }
 

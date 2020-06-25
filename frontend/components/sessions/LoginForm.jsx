@@ -10,6 +10,7 @@ class LoginForm extends React.Component{
         };
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleExit = this.handleExit.bind(this);
+        this.demoLogin = this.demoLogin.bind(this);
     }
 
     handleInput(type) {
@@ -26,6 +27,10 @@ class LoginForm extends React.Component{
 
     handleExit(){
         this.props.history.goBack()
+    }
+
+    demoLogin(){
+        this.props.demoUser()
     }
 
     render(){
@@ -54,6 +59,7 @@ class LoginForm extends React.Component{
                         <Link to='/signup'>Join</Link>
                         </p>
                     </div>
+                    
                     <br/>
                     <form onSubmit={this.handleSubmit}>
                         <label>Username</label>
