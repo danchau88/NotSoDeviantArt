@@ -2,6 +2,13 @@
     display: flex;
     justify-content: space-between;
     background-color: $pretty-black;
+    position: sticky;
+}
+
+.nav-left {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 .nav-left h1 {
@@ -17,6 +24,7 @@
 .nav-left h1:hover {
     color: $deviant-green;
 }
+
 
 .nav-right header {
     display: flex;
