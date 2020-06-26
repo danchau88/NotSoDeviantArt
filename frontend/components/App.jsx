@@ -14,7 +14,9 @@ const App = () => (
         <h1>DeviantArt</h1>
       </Link>
 
-      <Link id='home-btn' to='/'>HOME</Link>
+      <Link id='home-btn' to='/'>
+        <i className="fas fa-home"></i>
+      </Link>
 
       <div className='dropdown'>
         <button className="nav-button" id='more'>MORE</button>
