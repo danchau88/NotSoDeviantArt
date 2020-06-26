@@ -36,7 +36,7 @@ class LoginForm extends React.Component{
     render(){
         const leftDisplay = (
             <div className='form-left'>
-                <Link className='home-title' to='/'><h2>NotSoDeviantArt</h2></Link>
+                <Link className='home-title' to='/'><h2><span id='NS'>NotSo</span>DeviantArt</h2></Link>
                 <h1>JOIN THE LARGEST ART COMMUNITY IN THE WORLD</h1>
             </div>
         )
@@ -53,7 +53,7 @@ class LoginForm extends React.Component{
                 <div className='form-right'>
                     <div>
                     <header>
-                        <h2>Log In</h2>
+                        <h2>{'Log In '}<span id='NS'>NS</span>Deviant</h2>
                         <div className='toggle-link'>
                             <p>{'Become a NSdeviant. '} 
                             <Link to='/signup'>Join</Link>

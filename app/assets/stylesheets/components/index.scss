@@ -4,12 +4,15 @@ $pretty-black: #0D0C1D;
 $kinda-white: #F7F7F2;
 $deviant-green: #7CF0BD;
 $aqua-green-accent: #61D095;
-$grey-aqua: #304D6D;
+$gray-aqua: #304D6D;
 $dirty-dark-aqua: #084C61;
 $readable-gray: #87919E;
 $inactive-gray: #474954;
 $barely-gray: #35393C;
 $best-blue: #4D9DE0;
+$emerald-green: #2FBF71;
+$jet-gray: #343330;
+$dirty-white: #EAEAEA;
 
 //My Login/Signup Form elements
 $form-width: 30%;
@@ -36,6 +39,7 @@ $input-height: 30px;
 @import 'button';
 @import 'dropdown';
 @import 'icon';
+@import 'symbol';
 // @import 'searchform';
 
 body {

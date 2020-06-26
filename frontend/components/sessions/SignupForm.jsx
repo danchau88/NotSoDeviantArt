@@ -33,7 +33,7 @@ class SignupForm extends React.Component{
     render(){
         const leftDisplay = (
             <div className='form-left'>
-                <Link to='/'><h2>NotSoDeviantArt</h2></Link>
+                <Link to='/'><h2><span id='NS'>NotSo</span>DeviantArt</h2></Link>
                 <h1>JOIN THE LARGEST ART COMMUNITY IN THE WORLD</h1>
             </div>
         )    
@@ -47,8 +47,9 @@ class SignupForm extends React.Component{
                 {leftDisplay}
 
                 <div className='form-right'>
+                    <div>
                     <header>
-                        <h2>Join NotSoDeviantArt</h2>
+                        <h2>{'Join '}<span id='NS'>NotSo</span>DeviantArt</h2>
                         <div className='toggle-link'>
                             <p>{'Already a NSdeviant? '}
                             <Link to='/login'>Login</Link>
@@ -82,6 +83,7 @@ class SignupForm extends React.Component{
                         />
                         <button className='form-submit'>JOIN</button>
                     </form>
+                    </div>
 
                     <span 
                         className='exit-btn' 
