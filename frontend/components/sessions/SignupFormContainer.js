@@ -1,5 +1,5 @@
 import {connect} from 'react-redux';
-import {login} from './../../actions/session_actions';
+import {signup} from './../../actions/session_actions';
 import SignupForm from './SignupForm';
 
 const mSTP = (state) => ({

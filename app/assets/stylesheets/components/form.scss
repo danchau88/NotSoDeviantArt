@@ -33,7 +33,7 @@
     bottom: 0;
     //use asset-url for heroku
     background: asset-url('space_whale.png');
-    background-size: 1000px 625px;
+    background-size: 1000px 635px;
     opacity: 0.7;
     z-index: -1;
 }
@@ -58,7 +58,6 @@
     align-items: $form-align-items;
     flex-direction: $form-flex-direction;
 }
-
 
 .form-right header {
     color: $dirty-dark-aqua;
