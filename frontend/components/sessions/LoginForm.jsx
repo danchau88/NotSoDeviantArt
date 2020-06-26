@@ -59,11 +59,11 @@ class LoginForm extends React.Component{
                         <Link to='/signup'>Join</Link>
                         </p>
                     </div>
-                    <button className='form-submit' onClick={this.demoLogin}>
+                    <button className='demo-btn' onClick={this.demoLogin}>
                         DEMO IT
                     </button>
                     <br/>
-                    <form onSubmit={this.handleSubmit}>
+                    <form className="input-area" onSubmit={this.handleSubmit}>
                         <label>Username</label>
                         <br/>  
                         <input 

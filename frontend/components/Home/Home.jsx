@@ -5,7 +5,7 @@ export default ({currentUser, logout}) => {
     const display = currentUser ? (
         <div className='logged-in'>
            <h3>
-                <i class="fas fa-user-ninja"></i>
+                <i className="fas fa-user-ninja"></i>
                 {currentUser.username}
             </h3>
            <div className='dropdown-content'>

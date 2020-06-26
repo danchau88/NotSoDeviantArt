@@ -77,9 +77,21 @@
     margin: 10px;
     font-weight: bolder;
     font-size: 11px;
+    font-family: 'Kanit', sans-serif;
     line-height: 1.22;
     letter-spacing: 1.3px;
     color: $pretty-black;
+    border: none;
+    cursor: pointer;
+}
+
+.demo-btn {
+    background-color: $aqua-green-accent;
+    font-family: 'Odibee Sans', cursive;
+    letter-spacing: 1.5px;
+    font-weight: bold;
+    color: $dirty-dark-aqua;
+    padding: 10px;
     border: none;
     cursor: pointer;
 }
