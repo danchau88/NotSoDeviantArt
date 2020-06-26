@@ -65,16 +65,31 @@
     font-weight: bolder;
     font-family: 'Kanit', sans-serif;
     font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 40px;
 }
 
 .form-right label {
     font-weight: $form-description-weight;
     font-size: $form-description-size;
     color: $readable-gray;
+    margin-top: 10px;
 }
+
+.form-right form {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+
 
 .form-right input {
     width: $input-width;
     height: $input-height;
     font-size: $input-font-size;
+    margin-bottom: 10px;
 }

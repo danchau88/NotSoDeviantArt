@@ -49,51 +49,45 @@ class SignupForm extends React.Component{
                 <div className='form-right'>
                     <header>
                         <h2>Join NotSoDeviantArt</h2>
+                        <div className='toggle-link'>
+                            <p>{'Already a NSdeviant? '}
+                            <Link to='/login'>Login</Link>
+                            </p>
+                        </div>
                     </header>
-                    <div className='toggle-link'>
-                        <p>{'Already a NSdeviant? '}
-                        <Link to='/login'>Login</Link>
-                        </p>
-                    </div>
-                    <br/>
+
                     <form onSubmit={this.handleSubmit}>
                         <label>Pick a username </label>
-                        <br/>
                         <input 
                             type="text" 
                             value={this.state.username}
                             onChange={this.handleInput('username')} 
                         />
-                        <br/>
                         <label>Add your email</label>
-                        <br/>
                         <input 
                             type="text" 
                             value={this.state.email}
                             onChange={this.handleInput('email')} 
                         />
-                        <br/>
                         <label>Choose a password</label>
-                        <br/>
                         <input 
                             type="password" 
                             value={this.state.password}
                             onChange={this.handleInput('password')} 
                         />
-                        <br/>
                         <label>Date of Birth</label>
-                        <br/>
                         <input 
                             type="date"
                             onChange={this.handleInput('DOB')}
                         />
-                        <br/>
                         <button className='form-submit'>JOIN</button>
                     </form>
+
                     <span 
                         className='exit-btn' 
                         onClick={this.handleExit}
                     >x</span>
+
                     <ul className='errors'>
                         {displayErrors}
                     </ul>

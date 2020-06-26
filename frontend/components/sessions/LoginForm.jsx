@@ -51,37 +51,35 @@ class LoginForm extends React.Component{
                 {leftDisplay}
 
                 <div className='form-right'>
+                    <div>
                     <header>
                         <h2>Log In</h2>
+                        <div className='toggle-link'>
+                            <p>{'Become a NSdeviant. '} 
+                            <Link to='/signup'>Join</Link>
+                            </p>
+                        </div>
+                        <button className='demo-btn' onClick={this.demoLogin}>
+                            DEMO IT
+                        </button>
                     </header>
-                    <div className='toggle-link'>
-                        <p>{'Become a NSdeviant. '} 
-                        <Link to='/signup'>Join</Link>
-                        </p>
-                    </div>
-                    <button className='demo-btn' onClick={this.demoLogin}>
-                        DEMO IT
-                    </button>
-                    <br/>
-                    <form className="input-area" onSubmit={this.handleSubmit}>
+    
+                    <form onSubmit={this.handleSubmit}>
                         <label>Username</label>
-                        <br/>  
                         <input 
                             type="text" 
                             value={this.state.username}
                             onChange={this.handleInput('username')} 
                         />  
-                        <br/>
                         <label>Password</label>
-                        <br/>
                         <input 
                             type="password"
                             value={this.state.password}
                             onChange={this.handleInput('password')}
                         />
-                        <br/>
                         <button className='form-submit'>LOG IN</button>
                     </form>
+                    </div>
                     <span 
                         className='exit-btn'
                         onClick={this.handleExit}

@@ -49,6 +49,11 @@
     font-size: 14px;
 }
 
+.toggle-link a {
+    color: $best-blue;
+    font-weight: bold;
+}
+
 .exit-btn {
     position: absolute;
     font-family: 'Kanit', sans-serif;
@@ -74,7 +79,7 @@
     background-color: $deviant-green;
     width: 120px;
     height: 54px;
-    margin: 10px;
+    margin-top: 10px;
     font-weight: bolder;
     font-size: 11px;
     font-family: 'Kanit', sans-serif;
