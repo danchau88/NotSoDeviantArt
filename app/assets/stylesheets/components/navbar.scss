@@ -9,6 +9,7 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    margin-left: 5px;
 }
 
 .nav-left a {
@@ -16,9 +17,9 @@
     flex-direction: row;
     align-items: center;
     color: $kinda-white;
-    padding: 10px;
     font-family: 'Odibee Sans', cursive;
     letter-spacing: 1.3px;
+    margin-left: 5px;
 }
 
 .nav-left a:hover {
@@ -30,7 +31,6 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    margin: 10px;
     padding: 20px;
     color: $kinda-white;
 }

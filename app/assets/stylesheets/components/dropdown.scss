@@ -6,7 +6,7 @@
 }
 
 .logged-in:hover {
-    color: $aqua-green-accent;
+    color: $deviant-green;
     // background-color: $kinda-white;
 }
 
@@ -22,17 +22,16 @@
 
 .logged-in:hover h3 {
     padding: 5px;
-    border-bottom: 2px solid $aqua-green-accent;
+    border-bottom: 3px solid $aqua-green-accent;
 }
 
 .submission-btn {
-    padding: 10px;
+    padding: 13px 30px;
     border: none;
     color: $deviant-green;
     background-color: $pretty-black;
     font-family: 'Kanit', sans-serif;
     font-weight: bold;
-    padding: 13px;
 }
 
 .dropdown:hover .submission-btn {
