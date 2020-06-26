@@ -4,7 +4,10 @@ import {Link} from 'react-router-dom';
 export default ({currentUser, logout}) => {
     const display = currentUser ? (
         <div className='logged-in'>
-           <h3>{currentUser.username}</h3>
+           <h3>
+                <i class="fas fa-user-ninja"></i>
+                {currentUser.username}
+            </h3>
            <div className='dropdown-content'>
                 <button className='drop-button' onClick={logout}>LOG OUT</button>
            </div>

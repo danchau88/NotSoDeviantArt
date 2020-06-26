@@ -7,15 +7,14 @@
 
 .logged-in:hover {
     color: $aqua-green-accent;
-    background-color: $kinda-white;
-    width: 60px;
+    // background-color: $kinda-white;
 }
 
 .logged-in h3 {
     font-family: 'Odibee Sans', cursive;
     font-weight: bolder;
-    letter-spacing: 1.5px;
-    font-size: 22px;
+    letter-spacing: 1.8px;
+    font-size: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
