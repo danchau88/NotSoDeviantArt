@@ -1,0 +1,1 @@
+json.partial! 'api/deviations/deviation', deviation: @deviation

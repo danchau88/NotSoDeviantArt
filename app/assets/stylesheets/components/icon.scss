@@ -1,3 +1,4 @@
+//Search button
 .search-button {
     padding: 10px 25px;
     color: $readable-gray;
@@ -13,17 +14,35 @@
     color: $kinda-white;
 }
 
+//Title Logo
 .fa-deviantart {
     color: $deviant-green;
     font-size: xx-large;
 }
 
+//Profile Icon
 .fa-user-ninja {
     color: $readable-gray;
     margin: 5px;
     font-size: large;
 }
 
+//Home Icon
 .fa-home {
     font-size: large;
+}
+
+//Stacked Icon
+.fa-stack {
+    vertical-align: middle;
+    font-size: 6px;
+    bottom: 1px;
+}
+
+.fa-circle {
+    color: red;
+}
+
+.fa-star {
+    color: $kinda-white;
 }

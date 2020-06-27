@@ -6,6 +6,7 @@
     left: 0;
     background-color: rgba(0,0,0,0.5);
     display: flex;
+    align-items: center;
     justify-content: center;
 }
 
@@ -14,13 +15,19 @@
     color: $kinda-white;
     padding: $form-padding;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-weight: bolder;
+    font-weight: normal;
     width: $form-width;
     height: $form-height;
     display: flex;
     flex-wrap: wrap;
-    justify-content: $form-justify-content;
-    align-items: center;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.form-left-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 // This was to make on the background opacity, not whole form
@@ -46,6 +53,19 @@
     font-weight: bolder;
     // color: $dirty-dark-aqua;
     color: $dirty-white;
+}
+
+#credit {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    font-size: small;
+    margin-top: 40%;
+}
+
+#credit > a {
+    font-weight: bolder;
 }
 
 .form-right {
@@ -93,4 +113,8 @@
     height: $input-height;
     font-size: $input-font-size;
     margin-bottom: 10px;
+}
+
+.errors {
+
 }
