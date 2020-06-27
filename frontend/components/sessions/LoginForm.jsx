@@ -36,10 +36,22 @@ class LoginForm extends React.Component{
     render(){
         const leftDisplay = (
             <div className='form-left'>
-                <Link className='home-title' to='/'><h2><span id='NS'>NotSo</span>DeviantArt</h2></Link>
-                <h1>JOIN THE LARGEST ART COMMUNITY IN THE WORLD</h1>
+                <div className='form-left-content'>
+                    <Link to='/'><h2><span id='NS'>NotSo</span>DeviantArt</h2></Link>
+                    <h1>JOIN THE LARGEST ART COMMUNITY IN THE WORLD</h1>
+                    <p>Explore and discover art, become a better artist, connect with others over mutual hobbies, or buy and sell work – you can do it all here.</p>
+                    <div id='credit'>
+                        <label>ART BY</label>
+                        <Link id='user'>Guest
+                            <span className="fa-stack">
+                                <i className="fas fa-circle fa-stack-2x"></i>
+                                <i className="fas fa-star fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </Link>
+                    </div>
+                </div>
             </div>
-        )
+        )    
 
         const displayErrors = this.props.errors.map((error, index) => (
             <li key={index}>{error}</li>
