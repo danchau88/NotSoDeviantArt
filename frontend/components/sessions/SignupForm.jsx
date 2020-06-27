@@ -59,7 +59,7 @@ class SignupForm extends React.Component{
                 {leftDisplay}
 
                 <div className='form-right'>
-                    <div>
+                    <div className='form-right-content'>
                     <header>
                         <h2>{'Join '}<span id='NS'>NotSo</span>DeviantArt</h2>
                         <div className='toggle-link'>

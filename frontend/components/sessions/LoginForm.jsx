@@ -63,7 +63,7 @@ class LoginForm extends React.Component{
                 {leftDisplay}
 
                 <div className='form-right'>
-                    <div>
+                    <div className='form-right-content'>
                     <header>
                         <h2>{'Log In '}<span id='NS'>NS</span>Deviant</h2>
                         <div className='toggle-link'>
