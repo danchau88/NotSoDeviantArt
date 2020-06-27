@@ -84,7 +84,7 @@
 }
 
 .form-right-content { 
-    width: 70%;
+    width: 85%;
     height: 100%;
 }
 
@@ -97,14 +97,14 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    margin-bottom: 40px;
+    margin-bottom: 10%;
 }
 
 .form-right label {
     font-weight: $form-description-weight;
     font-size: $form-description-size;
     color: $readable-gray;
-    margin-top: 10%;
+    margin-top: 2%;
 }
 
 .form-right form {
@@ -119,9 +119,12 @@
     width: $input-width;
     height: $input-height;
     font-size: $input-font-size;
-    margin-bottom: 2%;
+    margin-bottom: 3%;
 }
 
 .errors {
-
+    font-family: 'Kanit', sans-serif;
+    font-weight: lighter;
+    color: $kinda-red;
+    font-size: small;
 }

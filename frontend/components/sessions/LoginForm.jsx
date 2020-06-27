@@ -64,6 +64,7 @@ class LoginForm extends React.Component{
 
                 <div className='form-right'>
                     <div className='form-right-content'>
+
                     <header>
                         <h2>{'Log In '}<span id='NS'>NS</span>Deviant</h2>
                         <div className='toggle-link'>
@@ -91,14 +92,15 @@ class LoginForm extends React.Component{
                         />
                         <button className='form-submit'>LOG IN</button>
                     </form>
+                    <ul className='errors'>
+                        {displayErrors}
+                    </ul>
+                    
                     </div>
                     <span 
                         className='exit-btn'
                         onClick={this.handleExit}
                     >x</span>
-                    <ul className='errors'>
-                        {displayErrors}
-                    </ul>
                 </div>
             </div>
         )

@@ -60,6 +60,7 @@ class SignupForm extends React.Component{
 
                 <div className='form-right'>
                     <div className='form-right-content'>
+
                     <header>
                         <h2>{'Join '}<span id='NS'>NotSo</span>DeviantArt</h2>
                         <div className='toggle-link'>
@@ -68,7 +69,6 @@ class SignupForm extends React.Component{
                             </p>
                         </div>
                     </header>
-
                     <form onSubmit={this.handleSubmit}>
                         <label>Pick a username </label>
                         <input 
@@ -95,18 +95,15 @@ class SignupForm extends React.Component{
                         />
                         <button className='form-submit'>JOIN</button>
                     </form>
-                    </div>
-
-                    <span 
-                        className='exit-btn' 
-                        onClick={this.handleExit}
-                    >x</span>
-
                     <ul className='errors'>
                         {displayErrors}
                     </ul>
 
-
+                    </div>
+                    <span 
+                        className='exit-btn' 
+                        onClick={this.handleExit}
+                    >x</span>
                 </div>
             </div>
         )
