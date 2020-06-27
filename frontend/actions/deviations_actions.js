@@ -1,4 +1,4 @@
-import * as APIUtil from '../util/deviation_api_util';
+import * as APIUtil from '../util/deviations_api_util';
 
 export const RECEIVE_ALL_DEVIATIONS = 'RECEIVE_ALL_DEVIATIONS';
 export const RECEIVE_DEVIATION = 'RECEIVE_DEVIATION';

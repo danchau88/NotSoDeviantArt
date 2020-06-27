@@ -1,4 +1,4 @@
-import {RECEIVE_ALL_DEVIATIONS, RECEIVE_DEVIATION, REMOVE_DEVIATION} from '../actions/deviation_actions';
+import {RECEIVE_ALL_DEVIATIONS, RECEIVE_DEVIATION, REMOVE_DEVIATION} from '../actions/deviations_actions';
 
 export default (state = {}, action) => {
     Object.freeze(state);
