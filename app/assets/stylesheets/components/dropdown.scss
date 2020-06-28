@@ -1,8 +1,8 @@
 .logged-in {
     position: relative;
     display: inline-block;
-    cursor: default;
     margin-right: 10px;
+    color: $readable-gray;
 }
 
 .logged-in:hover {

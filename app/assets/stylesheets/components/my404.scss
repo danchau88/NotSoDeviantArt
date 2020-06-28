@@ -1,0 +1,36 @@
+.my404-content {
+    background: asset-url('astronaut_minimalism.jpg');
+    background-size: cover;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    font-family: sans-serif;
+    color: $kinda-white;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+}
+
+.my404-content h1 {
+    font-family: 'Kanit', sans-serif;
+    letter-spacing: 1.2px;
+}
+
+.my404-content button {
+    border: 1.5px solid $emerald-green;
+    background-color: transparent;
+    width: 170px;
+    height: 54px;
+    letter-spacing: 1.2px;
+    font-family: 'Kanit', sans-serif;
+    font-weight: bold;
+    color: $kinda-white;
+    margin-top: 10%;
+}
+
+.my404-content button:hover {
+    color: $deviant-green;
+    cursor: pointer;
+}

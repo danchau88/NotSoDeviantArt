@@ -26,12 +26,17 @@
     color: $deviant-green;
 }
 
-
-.nav-right header {
+.nav-right-content{
     display: flex;
+    flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    color: $kinda-white;
-    margin-top: 5%;
 }
 
+.nav-right header {
+    color: $kinda-white;
+}
+
+.unlogged-in {
+    color: $readable-gray;
+}
