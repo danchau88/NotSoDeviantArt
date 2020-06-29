@@ -4,7 +4,7 @@ import deviationsReducer from './deviations_reducer'
 
 const entitiesReducer = combineReducers({
     users: usersReducer,
-    deviations: deviationsReducer 
+    deviations: deviationsReducer, 
 });
 
 export default entitiesReducer;

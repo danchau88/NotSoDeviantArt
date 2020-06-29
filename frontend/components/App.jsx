@@ -5,6 +5,7 @@ import SignupFormContainer from './sessions/SignupFormContainer';
 import {Route, Link, Switch} from 'react-router-dom';
 import {AuthRoute} from './../util/route_util';
 import My404From from "./my404/My404Form.jsx";
+import DeviationsIndexContainer from "./deviations/DeviationsIndex/DeviationsIndexContainer.js";
 
 const App = () => (
   <div>
@@ -38,6 +39,7 @@ const App = () => (
     </div>
 
     <Switch>
+      <Route exact path="/" component={DeviationsIndexContainer} />
       <AuthRoute path="/login" component={LoginFormContainer} />
       <AuthRoute path="/signup" component={SignupFormContainer} />
       <Route component={My404From} />

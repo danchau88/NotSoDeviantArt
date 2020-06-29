@@ -54,13 +54,13 @@ class SignupForm extends React.Component{
             </div>
         )    
         
-        const displayErrors =
+        const displayErrors = (
             <ul className='errors'>
                 {this.props.errors.map((error, index) => (
                     <li key={index}>{error}</li>
                 ))}
             </ul>
-        
+        )
         return(
             <div className='form-bg'>
 
