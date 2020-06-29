@@ -1,8 +1,8 @@
-import {postUser, postSession, deleteSession} from '../util/session_api_util'
+import {postUser, postSession, deleteSession} from '../util/session_api_util';
 
-export const RECEIVE_CURRENT_USER = "RECEIVE_CURRENT_USER"
-export const LOGOUT_CURRENT_USER = "LOGOUT_CURRENT_USER"
-export const RECEIVE_SESSION_ERRORS = "RECEIVE_SESSION_ERRORS"
+export const RECEIVE_CURRENT_USER = "RECEIVE_CURRENT_USER";
+export const LOGOUT_CURRENT_USER = "LOGOUT_CURRENT_USER";
+export const RECEIVE_SESSION_ERRORS = "RECEIVE_SESSION_ERRORS";
 
 
 export const receiveCurrentUser = (user) =>{
@@ -44,4 +44,3 @@ export const demoUser = () => dispatch => {
     .then( res => dispatch(receiveCurrentUser(res)))
     .fail((errors) => dispatch(receiveErrors(errors.responseJSON)));
 };
-    

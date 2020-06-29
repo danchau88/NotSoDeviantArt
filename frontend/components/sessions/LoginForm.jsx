@@ -13,6 +13,10 @@ class LoginForm extends React.Component{
         this.demoLogin = this.demoLogin.bind(this);
     }
 
+    componentDidMount() {
+        this.props.clearErrors()
+    }
+
     handleInput(type) {
         return (e) => {
             this.setState({ [type]: e.target.value });
@@ -52,10 +56,13 @@ class LoginForm extends React.Component{
                 </div>
             </div>
         )    
-
-        const displayErrors = this.props.errors.map((error, index) => (
-            <li key={index}>{error}</li>
-        ));
+        
+        const displayErrors =
+            <ul className='errors'>
+                {this.props.errors.map((error, index) => (
+                    <li key={index}>{error}</li>
+                ))}
+            </ul>
 
         return(
             <div className='form-bg'>
@@ -92,9 +99,8 @@ class LoginForm extends React.Component{
                         />
                         <button className='form-submit'>LOG IN</button>
                     </form>
-                    <ul className='errors'>
-                        {displayErrors}
-                    </ul>
+
+                    {displayErrors}
                     
                     </div>
                     <span 

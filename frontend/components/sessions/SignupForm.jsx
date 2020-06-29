@@ -14,6 +14,10 @@ class SignupForm extends React.Component{
         this.handleExit = this.handleExit.bind(this);
     }
     
+    componentDidMount() {
+        this.props.clearErrors()
+    }
+
     handleInput(type) {
         return (e) => {
             this.setState({ [type]: e.target.value });
@@ -49,9 +53,13 @@ class SignupForm extends React.Component{
                 </div>
             </div>
         )    
-        const displayErrors = this.props.errors.map((error, index) => (
-            <li key={index}>{error}</li>
-        ));
+        
+        const displayErrors =
+            <ul className='errors'>
+                {this.props.errors.map((error, index) => (
+                    <li key={index}>{error}</li>
+                ))}
+            </ul>
         
         return(
             <div className='form-bg'>
@@ -95,9 +103,8 @@ class SignupForm extends React.Component{
                         />
                         <button className='form-submit'>JOIN</button>
                     </form>
-                    <ul className='errors'>
-                        {displayErrors}
-                    </ul>
+
+                    {displayErrors}
 
                     </div>
                     <span 
