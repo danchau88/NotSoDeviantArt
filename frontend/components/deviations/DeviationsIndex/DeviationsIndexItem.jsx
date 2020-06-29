@@ -7,7 +7,7 @@ class DeviationsIndexItem extends React.Component{
         return(
             <li className='dev-index-item' >
                 <Link>
-                    {deviation.artworkUrl}
+                    <img src={deviation.artworkUrl}/>
                     <h3>{deviation.title}</h3>
                 </Link>
             </li>
