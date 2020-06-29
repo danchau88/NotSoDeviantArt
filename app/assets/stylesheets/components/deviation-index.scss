@@ -1,8 +1,41 @@
-.dev-index-item h3 {
+.dev-index {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.dev-index-item {
+    position: relative;
+    margin: 4px;
+    padding: 0;
+    border: 0;
+    height: 266.99px;
+    // z-index: 1;
+}
+
+.dii-text {
+    bottom: 0;
+    left: 5px;
+    right: 0;
+    display: none;
+    position: absolute;
     color: $kinda-white;
+    font-family: 'Kanit', sans-serif;
+    font-weight: bold;
+}
+
+.dev-index-item:hover .dii-text {
+    display: flex;
+    background-color: transparent;
 }
 
 .dev-index-item img {
-    width: 35%;
-    height: 40%;
+    width: auto;
+    height: 100%;
+}
+
+.dev-index-item:hover img {
+    opacity: 0.6;
 }

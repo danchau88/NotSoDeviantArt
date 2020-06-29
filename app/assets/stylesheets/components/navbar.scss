@@ -2,8 +2,13 @@
     display: flex;
     justify-content: space-between;
     background-color: $pretty-black;
-    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+    z-index: 1;
 }
+
 
 .nav-left {
     display: flex;
@@ -35,6 +40,10 @@
 
 .nav-right header {
     color: $kinda-white;
+}
+
+.navbar-offset {
+    margin-top: 78.43px;
 }
 
 .unlogged-in {

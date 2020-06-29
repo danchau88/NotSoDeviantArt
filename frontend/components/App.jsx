@@ -38,12 +38,14 @@ const App = () => (
       <Route className='nav-right' path='/' component={HomeContainer} />
     </div>
 
-    <Switch>
-      <Route exact path="/" component={DeviationsIndexContainer} />
-      <AuthRoute path="/login" component={LoginFormContainer} />
-      <AuthRoute path="/signup" component={SignupFormContainer} />
-      <Route component={My404From} />
-    </Switch>
+    <div className='navbar-offset'>
+      <Switch>
+        <Route exact path="/" component={DeviationsIndexContainer} />
+        <AuthRoute path="/login" component={LoginFormContainer} />
+        <AuthRoute path="/signup" component={SignupFormContainer} />
+        <Route component={My404From} />
+      </Switch>
+    </div>
 
   </div>
 );

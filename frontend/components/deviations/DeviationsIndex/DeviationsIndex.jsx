@@ -12,9 +12,12 @@ class DeviationsIndex extends React.Component{
             <DeviationsIndexItem deviation={deviation} key={`dev-${deviation.id}`} />
         )
         return(
-            <ul className='dev-index'>
-                {devItems}
-            </ul>
+            <div className='outer-box'>
+                <div className='dev-index-navbar'></div>
+                <section className='dev-index'>
+                    {devItems}
+                </section>
+            </div>
         )
     }
 }

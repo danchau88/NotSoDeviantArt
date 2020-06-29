@@ -5,12 +5,13 @@ class DeviationsIndexItem extends React.Component{
     render() {
         const {deviation} = this.props
         return(
-            <li className='dev-index-item' >
-                <Link>
-                    <img src={deviation.artworkUrl}/>
-                    <h3>{deviation.title}</h3>
-                </Link>
-            </li>
+            <Link className='dev-index-item'>
+                <img src={deviation.artworkUrl}/>
+                <div className='dii-text'>
+                    <p>{deviation.title}</p>
+                    {/* <p>{deviation.artist.username}</p> */}
+                </div>
+            </Link>
         )
     }
 };
