@@ -3,13 +3,15 @@ import DeviationsIndexItem from './DeviationsIndexItem';
 
 class DeviationsIndex extends React.Component{
     componentDidMount(){
-        this.props.getAllDeviations()
+        this.props.getAllDeviations(),
+        this.props.getAllUsers()
     }
 
     render() {
-        const {deviations} = this.props;
+        const {deviations, users} = this.props;
+        console.log(users);
         const devItems = deviations.map(deviation => 
-            <DeviationsIndexItem deviation={deviation} key={`dev-${deviation.id}`} />
+            <DeviationsIndexItem deviation={deviation} artist={users[deviation.artist_id]} key={`dev-${deviation.id}`} />
         )
         return(
             <div className='outer-box'>

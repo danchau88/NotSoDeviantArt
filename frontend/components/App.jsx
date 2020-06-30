@@ -6,6 +6,8 @@ import {Route, Link, Switch} from 'react-router-dom';
 import {AuthRoute} from './../util/route_util';
 import My404From from "./my404/My404Form.jsx";
 import DeviationsIndexContainer from "./deviations/DeviationsIndex/DeviationsIndexContainer.js";
+import DeviationShowContainer from "./deviations/DeviationShow/DeviationShowContainer";
+
 
 const App = () => (
   <div>
@@ -41,6 +43,7 @@ const App = () => (
     <div className='navbar-offset'>
       <Switch>
         <Route exact path="/" component={DeviationsIndexContainer} />
+        <Route path="/deviations/:id" component={DeviationShowContainer} />
         <AuthRoute path="/login" component={LoginFormContainer} />
         <AuthRoute path="/signup" component={SignupFormContainer} />
         <Route component={My404From} />

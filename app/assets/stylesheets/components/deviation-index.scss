@@ -22,12 +22,20 @@
     display: none;
     position: absolute;
     color: $kinda-white;
-    font-family: 'Kanit', sans-serif;
+    font-family: sans-serif;
     font-weight: bold;
+}
+
+.dii-username {
+    font-weight: normal;
+    font-family: 'Kanit', sans-serif;
 }
 
 .dev-index-item:hover .dii-text {
     display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
     background-color: transparent;
 }
 
