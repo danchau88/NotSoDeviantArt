@@ -6,4 +6,8 @@ class Deviation < ApplicationRecord
         class_name: :User
 
     has_one_attached :artwork
+
+    has_many :comments,
+        foreign_key: :deviation_id,
+        class_name: :Comment
 end

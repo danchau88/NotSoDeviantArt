@@ -34,4 +34,16 @@ class User < ApplicationRecord
         foreign_key: :artist_id,
         class_name: :Deviation
         
+    has_many :comments,
+        foreign_key: :author_id,
+        class_name: :Comment
+
+    has_many :replies,
+        through: :comments;
+        source: :replies;
+
+    has_many :deviation_comments,
+        through: :deviations,
+        source: :comments
+
 end
