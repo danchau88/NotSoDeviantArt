@@ -12,7 +12,6 @@ class DeviationShow extends React.Component{
     componentDidMount(){
         this.props.getDeviation(this.props.match.params.id)
         .then(() => this.props.getUser(this.props.deviation.artist_id))
-        .then(() => this.props.getAllComments(this.props.match.params.id))
     }
 
     componentWillUnmount(){

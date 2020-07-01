@@ -1,0 +1,60 @@
+.add-comment form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.add-comment button {
+    border: none;
+    font-family: 'Kanit', sans-serif;
+    background-color: transparent;
+    color: $readable-gray;
+    bottom: 0;
+    left: 0;
+}
+
+.add-comment button:hover {
+    color: $emerald-green;
+    cursor: pointer;
+}
+
+.add-comment textarea {
+    background-color: $jet-gray;
+    color: $kinda-white;
+    margin-left: 10px;
+    width: 100%;
+    height: 50px;
+}
+
+.comments-list {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.comments-list li {
+    margin: 5%;
+    display: flex;
+    flex-direction: row;
+}
+
+.comment-content {
+    // background-color: $readable-gray;
+    background-color: $barely-gray;
+    width: 100%;
+    height: auto;
+    margin-left: 10px;
+    padding: 12px 24px 16px 16px;
+}
+
+.comment-content label {
+    color: $kinda-white;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.fa-user-astronaut {
+    font-size: x-large;
+}

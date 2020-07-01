@@ -6,8 +6,13 @@ class CommentItem extends React.Component{
         const {comment, author, deleteComment} = this.props 
         return(
             <li>
-                <label className="commenter">{author.username}</label>
+                <i className="fas fa-user-astronaut"></i>
+                <div className='comment-content'>
+                <label className="commenter">
+                    {author.username}
+                </label>
                 <p>{comment.body}</p>
+                </div>
             </li>
         )
     }

@@ -1,5 +1,5 @@
-json.array! @deviations do |deviation|
-
-    json.partial! 'api/deviations/deviation', deviation: deviation
-
+@deviations.each do |deviation|
+    json.set! deviation.id do
+        json.partial! 'api/deviations/deviation', deviation: deviation
+    end
 end

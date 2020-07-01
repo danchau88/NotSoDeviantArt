@@ -12,10 +12,12 @@ export const receiveAllDeviations = deviations => {
     };
 };
 
-export const receiveDeviation = deviation => {
+export const receiveDeviation = ({deviation, comments, users}) => {
     return {
         type: RECEIVE_DEVIATION,
-        deviation
+        deviation: deviation || {},
+        comments: comments || {},
+        users: users || {}
     };
 };
 

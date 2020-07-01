@@ -42,10 +42,10 @@ const App = () => (
 
     <div className='navbar-offset'>
       <Switch>
-        <Route exact path="/" component={DeviationsIndexContainer} />
         <Route path="/deviations/:id" component={DeviationShowContainer} />
         <AuthRoute path="/login" component={LoginFormContainer} />
         <AuthRoute path="/signup" component={SignupFormContainer} />
+        <Route exact path="/" component={DeviationsIndexContainer} />
         <Route component={My404From} />
       </Switch>
     </div>

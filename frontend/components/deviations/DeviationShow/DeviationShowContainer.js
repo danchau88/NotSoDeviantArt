@@ -19,10 +19,9 @@ const mSTP = (state, ownProps) => {
 const mDTP = dispatch => ({
     getDeviation: (deviationId) => dispatch(getDeviation(deviationId)),
     getUser: (userId) => dispatch(getUser(userId)),
-    getAllComments: (deviationId) => dispatch(getAllComments(deviationId)),
     createComment: (comment) => dispatch(createComment(comment)),
     deleteComment: (commentId) => dispatch(destroyComment(commentId)),
-    clearAllComments: () => dispatch(clearAllComments),
+    clearAllComments: () => dispatch(clearAllComments()),
 });
 
 export default connect(mSTP, mDTP)(DeviationShow);

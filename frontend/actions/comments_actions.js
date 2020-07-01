@@ -8,8 +8,8 @@ export const CLEAR_ALL_COMMENTS = "CLEAR_ALL_COMMENTS";
 const receiveAllComments = ({comments, users}) => {
     return {
         type: RECEIVE_ALL_COMMENTS,
-        comments,
-        users
+        comments: comments || {},
+        users: users || {}
     }
 }
 

@@ -6,6 +6,7 @@ class Api::DeviationsController < ApplicationController
     
     def show
         @deviation = Deviation.find(params[:id])
+        @comments = @deviation.comments.includes(:author) # like the associations chaining 
         render :show
     end
 
