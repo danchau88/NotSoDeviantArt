@@ -14,8 +14,12 @@ class Comment < ApplicationRecord
         class_name: :Comment,
         optional: true
 
-    has_many :replies
+    has_many :replies,
         foreign_key: :parent_id,
         class_name: :Comment
-        
+
+
+    # def get_all_replies
+
+    # end
 end

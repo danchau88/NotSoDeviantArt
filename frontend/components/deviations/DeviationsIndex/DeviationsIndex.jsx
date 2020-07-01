@@ -11,7 +11,7 @@ class DeviationsIndex extends React.Component{
         const {deviations, users} = this.props;
         console.log(users);
         const devItems = deviations.map(deviation => 
-            <DeviationsIndexItem deviation={deviation} artist={users[deviation.artist_id]} key={`dev-${deviation.id}`} />
+            <DeviationsIndexItem deviation={deviation} artist={users[deviation.artist_id]} key={`dev${deviation.id}`} />
         )
         return(
             <div className='outer-box'>

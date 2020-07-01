@@ -1,5 +1,6 @@
 import React from 'react';
-
+import CommentForm from './CommentForm';
+import CommentItem from './CommentItem';
 // import FullImage from './FullImage';
 
 class DeviationShow extends React.Component{
@@ -11,12 +12,25 @@ class DeviationShow extends React.Component{
     componentDidMount(){
         this.props.getDeviation(this.props.match.params.id)
         .then(() => this.props.getUser(this.props.deviation.artist_id))
+        .then(() => this.props.getAllComments(this.props.match.params.id))
     }
+
+    componentWillUnmount(){
+        this.props.clearAllComments()
+    }
+
+    // componentDidUpdate(prevProps){
+    //     if (this.props.comments.length !== prevProps.comments.length) {
+    //         this.props.getAllComments()
+    //     }
+    // }
     
     render() {
-        const {deviation, artist} = this.props
-
-        if (!deviation || !artist) return (
+        const {deviation, artist, comments, createComment, users, deleteComment, currentUser} = this.props
+        const commentsList = comments.map(comment => (
+            <CommentItem key={comment.id} comment={comment} author={users[comment.author_id]} deleteComment={deleteComment} /> 
+        ));
+        if (!deviation || !artist || !comments) return (
             <div></div>
         );
 
@@ -52,7 +66,10 @@ class DeviationShow extends React.Component{
 
                 <section className='dev-comments'>
                     <header><h3>COMMENTS</h3></header>
-                    <p>Coming Soon!</p>
+                    <ul className='comments-list'>
+                        <CommentForm createComment={createComment} deviationId={deviation.id} authorId={currentUser.id} />
+                        {commentsList}
+                    </ul>
                 </section>
 
             </div>

@@ -8,11 +8,6 @@ class Api::DeviationsController < ApplicationController
         @deviation = Deviation.find(params[:id])
         render :show
     end
-    
-    def new
-        @deviation = Deviation.new
-        render :new
-    end
 
     def create
         @deviation = Deviation.create(deviation_params)
@@ -21,11 +16,6 @@ class Api::DeviationsController < ApplicationController
         else
             render json: @deviation.errors.full_messages, status: 422
         end
-    end
-
-    def edit
-        @deviation = Deviation.find(params[:id])
-        render :edit
     end
 
     def update

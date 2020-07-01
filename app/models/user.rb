@@ -39,8 +39,8 @@ class User < ApplicationRecord
         class_name: :Comment
 
     has_many :replies,
-        through: :comments;
-        source: :replies;
+        through: :comments,
+        source: :replies
 
     has_many :deviation_comments,
         through: :deviations,

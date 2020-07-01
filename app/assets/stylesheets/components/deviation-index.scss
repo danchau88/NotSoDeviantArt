@@ -6,6 +6,7 @@
     align-items: center;
     margin-left: 2%;
     margin-right: 2%;
+    grid-auto-flow: dense;
 }
 
 .dev-index-item {
@@ -44,7 +45,6 @@
 
 .dev-index-item img {
     // width: auto;
-    object-fit: cover;
     width: auto;
     height: 100%;
 }

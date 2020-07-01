@@ -1,28 +1,23 @@
 class Api::CommentsController < ApplicationController
-
-    def new
-        @comment = Comment.new
-        render :new
+    def index
+        @comments = Comment.where(deviation_id: params[:deviation_id]).includes(:author)
+        render :index
     end
 
     def create
-        @comment = Comment.create(comment_params)
+        @comment = Comment.new(comment_params)
+        @comment.author_id = current_user.id
         if @comment.save
-            render :create
+            render :show
         else
             render json: @comment.errors.full_messages, status: 422
         end
     end
 
-    def edit
-        @comment = Comment.find(params[:id])
-        render :edit
-    end
-
     def update
         @comment = Comment.find(params[:id])
         if @comment.update(comment_params)
-            render :update
+            render :show
         else
             render json: @comment.errors.full_messages, status: 422
         end
@@ -39,6 +34,6 @@ class Api::CommentsController < ApplicationController
     
     private
     def comment_params
-        params.require(:comment).permit(:body, :author_id, :deviation_id, :parent_id)
+        params.require(:comment).permit(:body, :deviation_id, :parent_id)
     end
 end
