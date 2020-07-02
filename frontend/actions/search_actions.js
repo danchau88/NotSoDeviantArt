@@ -7,3 +7,5 @@ export const searchDeviations = title => dispatch => {
         title: title
     })
 }
+
+export const getRandomInteger = () => dispatch => 
