@@ -1,6 +1,7 @@
 import {RECEIVE_COMMENT, REMOVE_COMMENT, RECEIVE_ALL_COMMENTS, CLEAR_ALL_COMMENTS} from '../actions/comments_actions';
 import {RECEIVE_DEVIATION} from '../actions/deviations_actions';
 
+
 export default (state={}, action) => {
     Object.freeze(state);
     const nextState = Object.assign({}, state);

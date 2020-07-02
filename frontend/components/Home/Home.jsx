@@ -7,12 +7,10 @@ export default ({currentUser, logout}) => {
            <Link to='/'>
                 <h3><i className="fas fa-user-ninja"></i>{currentUser.username}</h3>
            </Link>
-           <div className='dropdown-content'>
-                
-                    <button className='drop-button' onClick={logout}>
-                    <Link to='/'>LOG OUT</Link>
-                    </button>
-                
+           <div className='dropdown-content'>     
+                <button className='drop-button' onClick={logout}>
+                <Link to='/'>LOG OUT</Link>
+                </button>     
            </div>
         </div>
     ) : (
@@ -35,8 +33,8 @@ export default ({currentUser, logout}) => {
                 <button className="submission-btn">SUBMIT</button>
                 <div className='dropdown-content'>
                     <button>DEVIATION</button>
-                    <button>NOTE</button>
-                    <button>COMMENT</button>
+                    {/* <button>NOTE</button> */}
+                    {/* <button>COMMENT</button> */}
                 </div>
             </div>
             {/* Submission section for the deviations */}

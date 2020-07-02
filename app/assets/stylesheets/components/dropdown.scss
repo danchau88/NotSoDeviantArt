@@ -68,6 +68,14 @@
     cursor: pointer;
 }
 
+.nav-left .drop-button a {
+    color: $pretty-black;
+    font-family: 'Kanit', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .logged-in button {
     cursor: pointer;
 }

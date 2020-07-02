@@ -14,15 +14,13 @@ class DeviationShow extends React.Component{
         .then(() => this.props.getUser(this.props.deviation.artist_id))
     }
 
+    // componentWillMount(){
+    //     this.props.getUser(this.props.currentUser.id)
+    // }
+
     componentWillUnmount(){
         this.props.clearAllComments()
     }
-
-    // componentDidUpdate(prevProps){
-    //     if (this.props.comments.length !== prevProps.comments.length) {
-    //         this.props.getAllComments()
-    //     }
-    // }
     
     render() {
         const {deviation, artist, comments, createComment, users, deleteComment, currentUser} = this.props
@@ -33,9 +31,9 @@ class DeviationShow extends React.Component{
         let newCommentForm;
         if (!currentUser) {
             newCommentForm = <div></div>
-        } else {
+        } else if (currentUser){
             newCommentForm = <CommentForm createComment={createComment} deviationId={deviation.id} authorId={currentUser.id} />
-        }
+        };
 
         if (!deviation || !artist || !comments) return (
             <div></div>
@@ -75,7 +73,7 @@ class DeviationShow extends React.Component{
 
                 <section className='dev-comments'>
                     <a id="dev_comments_section">
-                        <header><h3>COMMENTS</h3></header>
+                    <header><h3>COMMENTS</h3></header>
                     </a>
                     <ul className='comments-list'>
                         {newCommentForm}

@@ -88,14 +88,14 @@ class LoginForm extends React.Component{
                         <label>Username</label>
                         <input 
                             type="text"
-                            placeholder="Type username here"  
+                            placeholder="Username here"  
                             value={this.state.username}
                             onChange={this.handleInput('username')} 
                         />  
                         <label>Password</label>
                         <input 
                             type="password"
-                            placeholder="Type password here"  
+                            placeholder="Password here"  
                             value={this.state.password}
                             onChange={this.handleInput('password')}
                         />

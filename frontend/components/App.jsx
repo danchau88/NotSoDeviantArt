@@ -7,6 +7,7 @@ import {AuthRoute} from './../util/route_util';
 import My404From from "./my404/My404Form.jsx";
 import DeviationsIndexContainer from "./deviations/DeviationsIndex/DeviationsIndexContainer.js";
 import DeviationShowContainer from "./deviations/DeviationShow/DeviationShowContainer";
+import SearchContainer from "./search/SearchContainer";
 
 //Will Change this later for a more proper Explore
 function randomInteger(min, max) {
@@ -34,14 +35,23 @@ const App = () => (
           <button className="nav-button" id='more'>MORE</button>
           <div className='dropdown-content'>
             <button>FAVORITES</button>
-            <button><Link to={`/deviations/${randomInteger(11,51)}`}>EXPLORE</Link></button>
+            
+            <button className='drop-button'>
+              <Link to={`/deviations/${randomInteger(11,51)}`}>
+                EXPLORE
+              </Link>
+            </button>
+            
           </div>
         </div>
 
+        <Link to="/search">
         <button className='search-button'>
-          <i className="fas fa-search"></i>
-          {' SEARCH'}
+            <i className="fas fa-search"></i>
+            {' SEARCH'}
         </button>
+        </Link>
+
       </header>
       <Route className='nav-right' path='/' component={HomeContainer} />
     </div>
@@ -49,6 +59,7 @@ const App = () => (
     <div className='navbar-offset'>
       <Switch>
         <Route path="/deviations/:id" component={DeviationShowContainer} />
+        <Route path="/search" component={SearchContainer} />
         <AuthRoute path="/login" component={LoginFormContainer} />
         <AuthRoute path="/signup" component={SignupFormContainer} />
         <Route exact path="/" component={DeviationsIndexContainer} />
