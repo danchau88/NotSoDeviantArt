@@ -8,7 +8,11 @@ export default ({currentUser, logout}) => {
                 <h3><i className="fas fa-user-ninja"></i>{currentUser.username}</h3>
            </Link>
            <div className='dropdown-content'>
-                <button className='drop-button' onClick={logout}>LOG OUT</button>
+                
+                    <button className='drop-button' onClick={logout}>
+                    <Link to='/'>LOG OUT</Link>
+                    </button>
+                
            </div>
         </div>
     ) : (

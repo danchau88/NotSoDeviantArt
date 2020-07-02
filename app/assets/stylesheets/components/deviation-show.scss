@@ -1,6 +1,6 @@
 .dev-show {
     display: flex;
-    width: 60%;
+    width: 80%;
     height: 100%;
     justify-content: space-evenly;
     align-items: flex-start;
@@ -46,6 +46,7 @@
     color: $readable-gray;
     display: flex;
     flex-direction: column;
+    width: 100%;
     margin-bottom: 5%;
 }
 
@@ -59,6 +60,7 @@
 
 .dev-show-content span .fa-stack {
     font-size: 6px;
+    margin-left: 3px;
 }
 
 .dev-comments {
@@ -68,6 +70,7 @@
     justify-content: space-evenly;
     font-family: sans-serif;
     color: $readable-gray;
+    width: 100%;
 }
 .dev-comments h3 {
     font-family: 'Kanit', sans-serif;

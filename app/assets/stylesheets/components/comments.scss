@@ -19,7 +19,7 @@
 }
 
 .add-comment textarea {
-    background-color: $jet-gray;
+    background-color: $barely-gray;
     color: $kinda-white;
     margin-left: 10px;
     width: 100%;
@@ -35,15 +35,15 @@
 }
 
 .comments-list li {
-    margin: 5%;
     display: flex;
     flex-direction: row;
+    margin-bottom: 4%;
 }
 
 .comment-content {
     // background-color: $readable-gray;
     background-color: $barely-gray;
-    width: 100%;
+    width: 60%;
     height: auto;
     margin-left: 10px;
     padding: 12px 24px 16px 16px;
@@ -52,7 +52,14 @@
 .comment-content label {
     color: $kinda-white;
     font-weight: bold;
-    margin-bottom: 8px;
+}
+
+.comment-content p {
+    margin-top: 8px;
+}
+
+.comment-content label .fa-stack {
+    margin-left: 3px;
 }
 
 .fa-user-astronaut {

@@ -80,19 +80,22 @@ class SignupForm extends React.Component{
                     <form onSubmit={this.handleSubmit}>
                         <label>Pick a username </label>
                         <input 
-                            type="text" 
+                            type="text"
+                            placeholder="Type username here" 
                             value={this.state.username}
                             onChange={this.handleInput('username')} 
                         />
                         <label>Add your email</label>
                         <input 
-                            type="text" 
+                            type="text"
+                            placeholder="Type email here"  
                             value={this.state.email}
                             onChange={this.handleInput('email')} 
                         />
                         <label>Choose a password</label>
                         <input 
                             type="password" 
+                            placeholder="Type password here"  
                             value={this.state.password}
                             onChange={this.handleInput('password')} 
                         />

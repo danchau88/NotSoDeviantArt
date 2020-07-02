@@ -87,13 +87,15 @@ class LoginForm extends React.Component{
                     <form onSubmit={this.handleSubmit}>
                         <label>Username</label>
                         <input 
-                            type="text" 
+                            type="text"
+                            placeholder="Type username here"  
                             value={this.state.username}
                             onChange={this.handleInput('username')} 
                         />  
                         <label>Password</label>
                         <input 
                             type="password"
+                            placeholder="Type password here"  
                             value={this.state.password}
                             onChange={this.handleInput('password')}
                         />

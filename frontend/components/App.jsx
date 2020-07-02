@@ -8,6 +8,13 @@ import My404From from "./my404/My404Form.jsx";
 import DeviationsIndexContainer from "./deviations/DeviationsIndex/DeviationsIndexContainer.js";
 import DeviationShowContainer from "./deviations/DeviationShow/DeviationShowContainer";
 
+//Will Change this later for a more proper Explore
+function randomInteger(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min; //The maximum is inclusive and the minimum is inclusive 
+}
+//
 
 const App = () => (
   <div>
@@ -26,9 +33,8 @@ const App = () => (
         <div className='dropdown'>
           <button className="nav-button" id='more'>MORE</button>
           <div className='dropdown-content'>
-            <button>WATCH</button>
-            <button>FAVORITE</button>
-            <button>EXPLORE</button>
+            <button>FAVORITES</button>
+            <button><Link to={`/deviations/${randomInteger(11,51)}`}>EXPLORE</Link></button>
           </div>
         </div>
 

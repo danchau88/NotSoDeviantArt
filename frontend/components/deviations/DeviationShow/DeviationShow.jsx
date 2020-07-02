@@ -29,6 +29,14 @@ class DeviationShow extends React.Component{
         const commentsList = comments.map(comment => (
             <CommentItem key={comment.id} comment={comment} author={users[comment.author_id]} deleteComment={deleteComment} /> 
         ));
+        
+        let newCommentForm;
+        if (!currentUser) {
+            newCommentForm = <div></div>
+        } else {
+            newCommentForm = <CommentForm createComment={createComment} deviationId={deviation.id} authorId={currentUser.id} />
+        }
+
         if (!deviation || !artist || !comments) return (
             <div></div>
         );
@@ -42,7 +50,9 @@ class DeviationShow extends React.Component{
 
                 <div className='options-bar'>
                     <button><i className="far fa-star"></i>{` ADD TO FAVORITES`}</button>
-                    <button><i className="far fa-comment-alt"></i>{` COMMENT`}</button>
+                    <button>
+                        <a href="#dev_comments_section"><i className="far fa-comment-alt"></i>{` COMMENT`}</a>
+                    </button>
                 </div>
 
                 <div className='dev-show-content'>
@@ -64,12 +74,15 @@ class DeviationShow extends React.Component{
                 </div>
 
                 <section className='dev-comments'>
-                    <header><h3>COMMENTS</h3></header>
+                    <a id="dev_comments_section">
+                        <header><h3>COMMENTS</h3></header>
+                    </a>
                     <ul className='comments-list'>
-                        <CommentForm createComment={createComment} deviationId={deviation.id} authorId={currentUser.id} />
+                        {newCommentForm}
                         {commentsList}
                     </ul>
                 </section>
+
 
             </div>
         )
