@@ -14,9 +14,12 @@ class DeviationShow extends React.Component{
         .then(() => this.props.getUser(this.props.deviation.artist_id))
     }
 
-    // componentWillMount(){
-    //     this.props.getUser(this.props.currentUser.id)
-    // }
+    componentDidUpdate(prevProps){
+        if (this.props.match.params.id !== prevProps.match.params.id) {
+            this.props.getDeviation(this.props.match.params.id)
+            .then(() => this.props.getUser(this.props.deviation.artist_id))
+        }
+    }
 
     componentWillUnmount(){
         this.props.clearAllComments()
@@ -24,20 +27,23 @@ class DeviationShow extends React.Component{
     
     render() {
         const {deviation, artist, comments, createComment, users, deleteComment, currentUser} = this.props
+        
+        //Makes sure that these things are loaded
+        if (!deviation || !artist || !comments) return (
+            <div></div>
+        );
+
         const commentsList = comments.map(comment => (
             <CommentItem key={comment.id} comment={comment} author={users[comment.author_id]} deleteComment={deleteComment} /> 
         ));
         
         let newCommentForm;
+        
         if (!currentUser) {
             newCommentForm = <div></div>
         } else if (currentUser){
             newCommentForm = <CommentForm createComment={createComment} deviationId={deviation.id} authorId={currentUser.id} />
         };
-
-        if (!deviation || !artist || !comments) return (
-            <div></div>
-        );
 
         return(
             <div className='dev-show'>

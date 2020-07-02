@@ -17,57 +17,75 @@ function randomInteger(min, max) {
 }
 //
 
-const App = () => (
-  <div>
-    <div className='navbar'>
-      <header className='nav-left'> 
-        <Link to='/'>
-          <h1>NotSo</h1>
-          <i className="fab fa-deviantart"></i>
-          <h1>DeviantArt</h1>
-        </Link>
 
-        <Link id='home-btn' to='/'>
-          <i className="fas fa-home"></i>
-        </Link>
 
-        <div className='dropdown'>
-          <button className="nav-button" id='more'>MORE</button>
-          <div className='dropdown-content'>
-            <button>FAVORITES</button>
-            
-            <button className='drop-button'>
-              <Link to={`/deviations/${randomInteger(11,51)}`}>
-                EXPLORE
-              </Link>
+class App extends React.Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      randomInteger: randomInteger(11,51),
+    };
+    this.randomDeviationId = this.randomDeviationId.bind(this);
+  }
+
+  randomDeviationId() {
+    this.setState({randomInteger: randomInteger(11, 51)})
+  }
+
+  render() {
+    return(
+      <div>
+        <div className='navbar'>
+          <header className='nav-left'> 
+            <Link to='/'>
+              <h1>NotSo</h1>
+              <i className="fab fa-deviantart"></i>
+              <h1>DeviantArt</h1>
+            </Link>
+
+            <Link id='home-btn' to='/'>
+              <i className="fas fa-home"></i>
+            </Link>
+
+            <div className='dropdown'>
+              <button className="nav-button" id='more'>MORE</button>
+              <div className='dropdown-content'>
+                <button>FAVORITES</button>
+                
+                <button className='drop-button'>
+                  <Link onClick={this.randomDeviationId} to={`/deviations/${this.state.randomInteger}`}>
+                    EXPLORE
+                  </Link>
+                </button>
+                
+              </div>
+            </div>
+
+            <Link to="/search">
+            <button className='search-button'>
+                <i className="fas fa-search"></i>
+                {' SEARCH'}
             </button>
-            
-          </div>
+            </Link>
+
+          </header>
+          <Route className='nav-right' path='/' component={HomeContainer} />
         </div>
 
-        <Link to="/search">
-        <button className='search-button'>
-            <i className="fas fa-search"></i>
-            {' SEARCH'}
-        </button>
-        </Link>
+        <div className='navbar-offset'>
+          <Switch>
+            <Route path="/deviations/:id" component={DeviationShowContainer} />
+            <Route path="/search" component={SearchContainer} />
+            <AuthRoute path="/login" component={LoginFormContainer} />
+            <AuthRoute path="/signup" component={SignupFormContainer} />
+            <Route exact path="/" component={DeviationsIndexContainer} />
+            <Route component={My404From} />
+          </Switch>
+        </div>
 
-      </header>
-      <Route className='nav-right' path='/' component={HomeContainer} />
-    </div>
-
-    <div className='navbar-offset'>
-      <Switch>
-        <Route path="/deviations/:id" component={DeviationShowContainer} />
-        <Route path="/search" component={SearchContainer} />
-        <AuthRoute path="/login" component={LoginFormContainer} />
-        <AuthRoute path="/signup" component={SignupFormContainer} />
-        <Route exact path="/" component={DeviationsIndexContainer} />
-        <Route component={My404From} />
-      </Switch>
-    </div>
-
-  </div>
-);
+      </div>
+    )
+  }
+}
 
 export default App;
