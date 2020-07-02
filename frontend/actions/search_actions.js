@@ -8,4 +8,3 @@ export const searchDeviations = title => dispatch => {
     })
 }
 
-export const getRandomInteger = () => dispatch => 
