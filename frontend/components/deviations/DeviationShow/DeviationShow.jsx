@@ -31,7 +31,7 @@ class DeviationShow extends React.Component{
         //Makes sure that these things are loaded
         if (!deviation || !artist || !comments) return (
             <div className='loader'>
-                <div class="loadingio-spinner-bean-eater-916qsk75w7e"><div class="ldio-c4ah9yqoipt">
+                <div className="loadingio-spinner-bean-eater-916qsk75w7e"><div className="ldio-c4ah9yqoipt">
                 <div><div></div><div></div><div></div></div><div><div></div><div></div><div></div></div>
                 </div></div>
             </div>

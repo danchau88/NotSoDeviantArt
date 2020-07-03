@@ -9,6 +9,13 @@ class DeviationsIndex extends React.Component{
 
     render() {
         const {deviations, users} = this.props;
+        if (!deviations || !users) return (
+            <div className='loader'>
+                <div className="loadingio-spinner-bean-eater-916qsk75w7e"><div className="ldio-c4ah9yqoipt">
+                <div><div></div><div></div><div></div></div><div><div></div><div></div><div></div></div>
+                </div></div>
+            </div>
+        );
         const devItems = deviations.map(deviation => 
             <DeviationsIndexItem deviation={deviation} artist={users[deviation.artist_id]} key={deviation.id} />
         )
