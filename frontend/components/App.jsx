@@ -61,12 +61,9 @@ class App extends React.Component {
               </div>
             </div>
 
-            <Link to="/search">
-            <button className='search-button'>
-                <i className="fas fa-search"></i>
-                {' SEARCH'}
-            </button>
-            </Link>
+            <div className='search-nav'>
+              <Route path="/" component={SearchContainer} />
+            </div>
 
           </header>
           <Route className='nav-right' path='/' component={HomeContainer} />
@@ -75,7 +72,6 @@ class App extends React.Component {
         <div className='navbar-offset'>
           <Switch>
             <Route path="/deviations/:id" component={DeviationShowContainer} />
-            <Route path="/search" component={SearchContainer} />
             <AuthRoute path="/login" component={LoginFormContainer} />
             <AuthRoute path="/signup" component={SignupFormContainer} />
             <Route exact path="/" component={DeviationsIndexContainer} />

@@ -1,11 +1,12 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+
  
 class SearchForm extends React.Component {
     constructor(props) {
         super(props);
-        this.handleExit = this.handleExit.bind(this);
+        this.state = {title: ''};
         this.handleInput = this.handleInput.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
     
     componentDidMount(){
@@ -13,30 +14,26 @@ class SearchForm extends React.Component {
     }
 
     handleInput(e) {
-        this.props.searchDeviations(e.target.value)
+        this.setState({title: e.target.value})
     }
 
-
-    handleExit(){
-        this.props.history.goBack()
+    handleSubmit(e) {
+        e.preventDefault();
+        this.props.findDeviations(this.state.title)
     }
 
     render() {
         return(
-            <div className='search-bg'>
-                <div className='search-modal'>
-                    <label>Search NotSoDeviantArt</label>
-                    <form>
-                        <input 
-                            type="text" 
-                            placeholder="Deviation title..." 
-                            onChange={this.handleInput}
-                        />
-                        <button className='nav-button'><Link to='/'>SEARCH</Link></button>
-                    </form>
-                    
-                    <span className="search-exit" onClick={this.handleExit}>x</span>
-                </div>
+            <div className='search-bar'>
+                <label><i className="fas fa-search"></i>{' Search NotSoDeviantArt'}</label>
+                <form onSubmit={this.handleSubmit}>
+                    <input 
+                        type="text" 
+                        placeholder="Deviation title..." 
+                        onChange={this.handleInput}
+                    />
+                    <button className='nav-button'>SEARCH</button>
+                </form>
             </div>
         )
     }

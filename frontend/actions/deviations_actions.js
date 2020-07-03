@@ -64,3 +64,9 @@ export const deleteDeviation = deviationId => dispatch => (
     .then(() => dispatch(removeDeviation(deviationId)))
     .fail((errors) => dispatch(receiveDeviationErrors(errors.responseJSON)))
 );
+
+export const findDeviations = string => dispatch => (
+    APIUtil.searchDeviations(string)
+    .then((deviations) => dispatch(receiveAllDeviations(deviations)))
+    .fail((errors) => dispatch(receiveDeviationErrors(errors.responseJSON)))
+);

@@ -1,18 +1,10 @@
 //Search button
-.search-button {
-    padding: 10px 25px;
-    color: $readable-gray;
-    background-color: $pretty-black;
-    border: none;
-    font-family: 'Kanit', sans-serif;
-    font-size: 14px;
-    font-weight: bolder;
-    cursor: pointer;
+.search-nav {
+    display: flex;
+    flex-direction: row;
+    margin-left: 2%;
 }
 
-.search-button:hover {
-    color: $kinda-white;
-}
 
 //Title Logo
 .fa-deviantart {

@@ -58,9 +58,9 @@ class DeviationShow extends React.Component{
 
                 <div className='options-bar'>
                     <button><i className="far fa-star"></i>{` ADD TO FAVORITES`}</button>
-                    <button>
+                    {/* <button>
                         <a href="#dev_comments_section"><i className="far fa-comment-alt"></i>{` COMMENT`}</a>
-                    </button>
+                    </button> */}
                 </div>
 
                 <div className='dev-show-content'>

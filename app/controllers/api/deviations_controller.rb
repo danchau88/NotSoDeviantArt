@@ -1,6 +1,11 @@
 class Api::DeviationsController < ApplicationController
     def index
-        @deviations = Deviation.all
+        if params[:search]  
+            @deviations = Deviation.where('title ilike ?', "%#{params[:search]}%")
+        else
+            @deviations = Deviation.all
+        end
+
         render :index
     end
     

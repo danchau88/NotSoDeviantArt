@@ -22,3 +22,7 @@ export const deleteDeviation = deviationId => $.ajax({
     url: `/api/deviations/${deviationId}`,
     method: "DELETE"
 });
+
+export const searchDeviations = string => $.ajax({
+    url: `/api/deviations?search=${string}`
+})
