@@ -30,7 +30,11 @@ class DeviationShow extends React.Component{
         
         //Makes sure that these things are loaded
         if (!deviation || !artist || !comments) return (
-            <div></div>
+            <div className='loader'>
+                <div class="loadingio-spinner-bean-eater-916qsk75w7e"><div class="ldio-c4ah9yqoipt">
+                <div><div></div><div></div><div></div></div><div><div></div><div></div><div></div></div>
+                </div></div>
+            </div>
         );
 
         const commentsList = comments.map(comment => (
