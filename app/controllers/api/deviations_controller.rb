@@ -1,9 +1,9 @@
 class Api::DeviationsController < ApplicationController
     def index
         if params[:search]  
-            @deviations = Deviation.where('title ilike ?', "%#{params[:search]}%")
+            @deviations = Deviation.where('title ilike ?', "%#{params[:search]}%").includes(:artist)
         else
-            @deviations = Deviation.all
+            @deviations = Deviation.all.includes(:artist)
         end
 
         render :index

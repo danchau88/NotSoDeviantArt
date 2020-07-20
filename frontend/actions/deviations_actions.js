@@ -5,10 +5,12 @@ export const RECEIVE_DEVIATION = 'RECEIVE_DEVIATION';
 export const REMOVE_DEVIATION = 'REMOVE_DEVIATION';
 export const RECEIVE_DEVIATION_ERRORS = 'RECEIVE_DEVIATION_ERRORS';
 
-export const receiveAllDeviations = deviations => {
+export const receiveAllDeviations = ({deviations, users}) => {
     return { 
         type: RECEIVE_ALL_DEVIATIONS,
-        deviations
+        deviations,
+        users
+        //dont need || {} cause deviation guaranteed to have artist
     };
 };
 

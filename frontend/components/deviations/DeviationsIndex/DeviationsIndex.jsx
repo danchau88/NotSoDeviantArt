@@ -3,8 +3,9 @@ import DeviationsIndexItem from './DeviationsIndexItem';
 
 class DeviationsIndex extends React.Component{
     componentDidMount(){
-        this.props.getAllDeviations(),
         this.props.getAllUsers()
+        .then(() => this.props.getAllDeviations())
+        // .then(() => this.props.getAllUsers())
     }
 
     render() {

@@ -46,7 +46,7 @@ class LoginForm extends React.Component{
                     <p>Explore and discover art, become a better artist, connect with others over mutual hobbies, or buy and sell work – you can do it all here.</p>
                     <div id='credit'>
                         <label>ART BY</label>
-                        <Link id='user'>pjacubinas
+                        <Link to='/deviations/11' id='user'>pjacubinas
                             <span className="fa-stack">
                                 <i className="fas fa-circle fa-stack-2x"></i>
                                 <i className="fas fa-star fa-stack-1x fa-inverse"></i>
