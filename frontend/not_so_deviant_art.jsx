@@ -21,6 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
     store = configureStore();
   }
 
+  // TESTING COMMENTS REMOVE LATER
   window.getState = store.getState;
   window.dispatch = store.dispatch;
   window.createComment = createComment;
