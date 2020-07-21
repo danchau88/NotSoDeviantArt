@@ -3,11 +3,12 @@ import HomeContainer from "./Home/HomeContainer.js";
 import LoginFormContainer from './sessions/LoginFormContainer';
 import SignupFormContainer from './sessions/SignupFormContainer';
 import {Route, Link, Switch} from 'react-router-dom';
-import {AuthRoute} from './../util/route_util';
+import {AuthRoute, ProtectedRoute} from './../util/route_util';
 import My404From from "./my404/My404Form.jsx";
 import DeviationsIndexContainer from "./deviations/DeviationsIndex/DeviationsIndexContainer.js";
 import DeviationShowContainer from "./deviations/DeviationShow/DeviationShowContainer";
 import SearchContainer from "./search/SearchContainer";
+import deviationCreateContainer from "./deviations/DeviationCreate/deviationCreateContainer.js";
 
 //Will Change this later for a more proper Explore
 function randomInteger(min, max) {
@@ -72,6 +73,7 @@ class App extends React.Component {
         <div className='navbar-offset'>
           <Switch>
             <Route path="/deviations/:id" component={DeviationShowContainer} />
+            <ProtectedRoute path="/create/deviation" component={deviationCreateContainer} />
             <AuthRoute path="/login" component={LoginFormContainer} />
             <AuthRoute path="/signup" component={SignupFormContainer} />
             <Route exact path="/" component={DeviationsIndexContainer} />

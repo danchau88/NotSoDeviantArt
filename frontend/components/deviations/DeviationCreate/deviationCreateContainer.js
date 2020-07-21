@@ -3,7 +3,6 @@ import {createDeviation} from '../../../actions/deviations_actions';
 import DeviationCreateForm from './deviationCreateForm';
 
 const mSTP = (state) => ({
-  deviation: deviation,
   currentUser: state.entities.users[state.session.id],
 });
 

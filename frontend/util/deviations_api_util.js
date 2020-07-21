@@ -4,7 +4,7 @@ export const getAllDeviations = () => $.ajax({
 
 export const getDeviation = deviationId => $.ajax({
     url: `/api/deviations/${deviationId}`
-});
+  });
 
 export const postDeviation = deviation => $.ajax({
     url: "/api/deviations",

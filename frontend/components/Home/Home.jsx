@@ -28,16 +28,14 @@ export default ({currentUser, logout}) => {
 
             {display}
 
-            {/* Submission section for the deviations */}
             <div className="dropdown">
                 <button className="submission-btn">SUBMIT</button>
                 <div className='dropdown-content'>
-                    <button>DEVIATION</button>
+                    <button><Link to='/create/deviation'>DEVIATION</Link></button>
                     {/* <button>NOTE</button> */}
                     {/* <button>COMMENT</button> */}
                 </div>
             </div>
-            {/* Submission section for the deviations */}
 
         </header>
     );
