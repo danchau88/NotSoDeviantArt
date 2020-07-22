@@ -1,0 +1,62 @@
+.create-page {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.create-form-content {
+  background-color: $celadon;
+  width: 50%;
+  height: 80%;
+  border-radius: 15px;
+}
+
+.create-form-content h3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  font-weight: bold;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.create-form-content form {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.create-form-content input {
+  border-bottom: none;
+  width: 75%;
+  height: 30px;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.create-form-content textarea {
+  width: 75%;
+  min-height: 50px;
+  margin-bottom: 20px;
+}
+
+.create-form-content button {
+  cursor: pointer;
+  padding: 10px;
+  font-size: 15px;
+  background-color: $pretty-black;
+  font-family: 'Kanit', sans-serif;
+  line-height: 1.22;
+  letter-spacing: 1.3px;
+  color: $kinda-white;
+  border: none;
+}

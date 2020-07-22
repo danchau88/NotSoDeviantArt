@@ -9,7 +9,9 @@ export const getDeviation = deviationId => $.ajax({
 export const postDeviation = deviation => $.ajax({
     url: "/api/deviations",
     method: "POST",
-    data: {deviation}
+    data: deviation,
+    contentType: false,
+    processData: false
 });
 
 export const patchDeviation = deviation => $.ajax({

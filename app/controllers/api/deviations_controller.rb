@@ -44,6 +44,6 @@ class Api::DeviationsController < ApplicationController
     
     private
     def deviation_params
-        params.require(:deviation).permit(:title, :description, :artist_id)
+        params.require(:deviation).permit(:title, :description, :artist_id, :artwork)
     end
 end

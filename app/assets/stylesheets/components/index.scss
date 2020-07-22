@@ -15,6 +15,7 @@ $jet-gray: #343330;
 $dirty-white: #EAEAEA;
 $kinda-red: #941B0C;
 $velvet-red: #621708;
+$celadon: #9BDEAC;
 
 //My Login/Signup Form elements
 $form-width: 30%;
@@ -48,6 +49,7 @@ $input-height: 30px;
 @import 'comments';
 @import 'searchform';
 @import 'loader';
+@import 'deviation-form';
 
 body {
     background-color: $pretty-black;

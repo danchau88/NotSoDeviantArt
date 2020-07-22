@@ -1,4 +1,5 @@
 import React from 'react';
+import { $CombinedState } from 'redux';
 
 class DeviationCreateForm extends React.Component {
   constructor(props) {
@@ -19,11 +20,18 @@ class DeviationCreateForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.createDeviation(this.state);
+    
+    const formData = new FormData();
+    formData.append('deviation[title]', this.state.title);
+    formData.append('deviation[artist_id]', this.state.artist_id);
+    formData.append('deviation[description]', this.state.description);
+    formData.append('deviation[artwork]', this.state.artworkFile);
+
+    this.props.createDeviation(formData);
   }
 
   handleFile(e) {
-    e.preventDefault();
+    // e.preventDefault();
     this.setState({artworkFile: e.currentTarget.files[0]});
   }
   // componentDidMount(){ this.props.getCurrentUser() }
@@ -32,8 +40,9 @@ class DeviationCreateForm extends React.Component {
     return (
       <div className='create-page'>
         <div className='create-form-content'>
+          <h3>Submit a New Deviaiton</h3>
           <form onSubmit={this.handleSubmit}>
-            <input type="file"/>
+            <input type="file" onChange={this.handleFile} />
             <input 
               type="text" 
               value={this.state.title} 
