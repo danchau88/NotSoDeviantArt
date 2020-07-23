@@ -8,13 +8,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 3;
 }
 
 .create-form-content {
   background-color: $celadon;
-  width: 50%;
+  width: 60%;
   height: 80%;
   border-radius: 15px;
+  position: relative;
 }
 
 .create-form-content h3 {
@@ -43,6 +45,10 @@
   margin-bottom: 20px;
 }
 
+#new-chosen {
+  margin-bottom: 0;
+}
+
 .create-form-content textarea {
   width: 75%;
   min-height: 50px;
@@ -59,4 +65,31 @@
   letter-spacing: 1.3px;
   color: $kinda-white;
   border: none;
+}
+
+.create-form-content button:hover {
+  color: $emerald-green;
+}
+
+.img-preview {
+  width: inherit;
+  height: inherit;
+}
+
+.img-preview img {
+  max-height: 310px;
+  width: auto;
+  overflow-x: auto;
+  margin-bottom: 5px;
+}
+
+.exit-create {
+  position: absolute;
+  font-family: 'Kanit', sans-serif;
+  font-size: 20px;
+  padding: 5px;
+  top: 2%;
+  right: 2%;
+  font-weight: bold;
+  cursor: pointer;
 }

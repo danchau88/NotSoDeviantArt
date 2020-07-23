@@ -61,12 +61,12 @@ class App extends React.Component {
                 
               </div>
             </div>
-
-            <div className='search-nav'>
-              <Route path="/" component={SearchContainer} />
-            </div>
-
           </header>
+
+          <div className='search-nav'>
+            <Route path="/" component={SearchContainer} />
+          </div>
+
           <Route className='nav-right' path='/' component={HomeContainer} />
         </div>
 

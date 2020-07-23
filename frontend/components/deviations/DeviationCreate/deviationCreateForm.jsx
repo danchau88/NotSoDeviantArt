@@ -9,9 +9,11 @@ class DeviationCreateForm extends React.Component {
       artist_id: this.props.currentUser.id,
       description: '',
       artworkFile: null,
+      artworkUrl: null,
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleFile = this.handleFile.bind(this);
+    this.handleExit = this.handleExit.bind(this);
   }
 
   handleInput(type){
@@ -32,17 +34,33 @@ class DeviationCreateForm extends React.Component {
 
   handleFile(e) {
     // e.preventDefault();
-    this.setState({artworkFile: e.currentTarget.files[0]});
+    const file = e.currentTarget.files[0]; //brackets needed to take file format needed
+    const fileReader = new FileReader(); //neeed for image preview
+    fileReader.onloadend = () => {
+      
+      this.setState({artworkFile: file, artworkUrl: fileReader.result});
+    };
+    if (file) {fileReader.readAsDataURL(file)}; //if tatement to make sure that an image file is present
   }
-  // componentDidMount(){ this.props.getCurrentUser() }
+ 
+  handleExit() {
+    this.props.history.goBack()
+  }
 
   render() {
+    const preview = this.state.artworkUrl ? 
+      <div className="img-preview">
+        <h3>Image Preview</h3>
+        <img src={this.state.artworkUrl} />
+      </div> 
+      : null;
     return (
       <div className='create-page'>
         <div className='create-form-content'>
           <h3>Submit a New Deviaiton</h3>
           <form onSubmit={this.handleSubmit}>
-            <input type="file" onChange={this.handleFile} />
+            <input id="new-chosen" type="file" onChange={this.handleFile} />
+            {preview}
             <input 
               type="text" 
               value={this.state.title} 
@@ -56,6 +74,10 @@ class DeviationCreateForm extends React.Component {
             />
             <button>SUBMIT</button>
           </form>
+          <span 
+            className='exit-create'
+            onClick={this.handleExit}
+          >x</span>
         </div>
       </div>
     )
