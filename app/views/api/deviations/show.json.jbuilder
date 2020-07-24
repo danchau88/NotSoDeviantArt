@@ -10,6 +10,13 @@ json.comments do
     end
 end
 
+json.favorites do
+    @favorites.each do |favorite|
+        json.set! favorite.id do
+            json.partial! '/api/favorites/favorite', favorite: favorite
+        end
+    end
+end
 
 json.users do
     @comments.each do |comment|

@@ -1,0 +1,1 @@
+json.extract! favorite, :id, :deviation_id, :user_id
