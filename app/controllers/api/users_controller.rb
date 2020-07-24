@@ -22,6 +22,9 @@ class Api::UsersController < ApplicationController
     def show
         @user = User.find_by(id: params[:id])
         if @user
+            @comments = @user.comments
+            @deviations = @user.deviations
+            @favorites = @user.favorite_deviations
             render :show
         else
             render json: ["Unable to find user"], status: 404 

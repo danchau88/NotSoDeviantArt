@@ -23,10 +23,12 @@ class DeviationShow extends React.Component{
 
     componentWillUnmount(){
         this.props.clearAllComments()
+        this.props.clearAllFavorites()
     }
     
     render() {
-        const {deviation, artist, comments, createComment, users, deleteComment, currentUser} = this.props
+        const {deviation, favorites, favorited, users, artist, comments, currentUser,
+           createFavorite, createComment, deleteComment, deleteFavorite} = this.props
         
         //Makes sure that these things are loaded
         if (!deviation || !artist || !comments) return (
@@ -49,6 +51,10 @@ class DeviationShow extends React.Component{
             newCommentForm = <CommentForm createComment={createComment} deviationId={deviation.id} authorId={currentUser.id} />
         };
 
+        let favoriteStatus;
+          favorited === false ? <button><i className="far fa-star"></i>{` ADD TO FAVORITES`}</button> : 
+            <button><i className="fas fa-star"></i>{` ADD TO FAVORITES`}</button>
+
         return(
             <div className='dev-show'>
 
@@ -57,10 +63,7 @@ class DeviationShow extends React.Component{
                 </div>
 
                 <div className='options-bar'>
-                    <button><i className="far fa-star"></i>{` ADD TO FAVORITES`}</button>
-                    {/* <button>
-                        <a href="#dev_comments_section"><i className="far fa-comment-alt"></i>{` COMMENT`}</a>
-                    </button> */}
+                    {favoriteStatus}
                 </div>
 
                 <div className='dev-show-content'>
@@ -82,9 +85,8 @@ class DeviationShow extends React.Component{
                 </div>
 
                 <section className='dev-comments'>
-                    <a id="dev_comments_section">
                     <header><h3>COMMENTS</h3></header>
-                    </a>
+      
                     <ul className='comments-list'>
                         {newCommentForm}
                         {commentsList}

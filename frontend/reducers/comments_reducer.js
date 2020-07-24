@@ -12,7 +12,7 @@ export default (state={}, action) => {
             nextState[action.comment.id] = action.comment
             return nextState;
         case REMOVE_COMMENT:
-            nextState[action.commentId]
+            delete nextState[action.commentId]
             return nextState;
         case CLEAR_ALL_COMMENTS:
             return {};

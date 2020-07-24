@@ -12,13 +12,15 @@ class Api::DeviationsController < ApplicationController
     def show
         @deviation = Deviation.find(params[:id])
         @comments = @deviation.comments.includes(:author) #chains on comments and user. 
+        @favorites = @deviation.user_favorites
         render :show
     end
 
     def create
         @deviation = Deviation.create(deviation_params)
         if @deviation.save
-            @comments = @deviation.comments #need this for the show view page
+            @comments = @deviation.comments #need these for the show view page
+            @favorites = @deviation.user_favorites
             render :show
         else
             render json: @deviation.errors.full_messages, status: 422

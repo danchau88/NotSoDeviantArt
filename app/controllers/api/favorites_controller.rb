@@ -1,6 +1,7 @@
 class Api::FavoritesController < ApplicationController
   def create
     @favorite = Favorite.create(favorite_params)
+    render :new
   end
 
   def destroy

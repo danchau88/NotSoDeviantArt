@@ -1,5 +1,5 @@
 class Favorite < ApplicationRecord
-  validates :user_id, uniqueness: {scope: :deviation:id}
+  validates :user_id, uniqueness: {scope: :deviation_id}
 
   belongs_to :user,
     foreign_key: :user_id,

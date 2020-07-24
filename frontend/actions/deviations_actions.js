@@ -14,11 +14,12 @@ export const receiveAllDeviations = ({deviations, users}) => {
     };
 };
 
-export const receiveDeviation = ({deviation, comments, users}) => {
+export const receiveDeviation = ({deviation, comments, favorites, users}) => {
     return {
         type: RECEIVE_DEVIATION,
         deviation: deviation || {},
         comments: comments || {},
+        favorites: favorites || {},
         users: users || {}
     };
 };
