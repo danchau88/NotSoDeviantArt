@@ -36,6 +36,10 @@
   align-items: center;
 }
 
+.create-form-content form ul {
+  font-size: 13px;
+}
+
 .create-form-content input {
   border-bottom: none;
   width: 75%;
@@ -65,6 +69,7 @@
   letter-spacing: 1.3px;
   color: $kinda-white;
   border: none;
+  margin-bottom: 5px;
 }
 
 .create-form-content button:hover {

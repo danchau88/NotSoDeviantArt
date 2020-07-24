@@ -27,7 +27,9 @@ class DeviationCreateForm extends React.Component {
     formData.append('deviation[title]', this.state.title);
     formData.append('deviation[artist_id]', this.state.artist_id);
     formData.append('deviation[description]', this.state.description);
-    formData.append('deviation[artwork]', this.state.artworkFile);
+    if (this.state.artworkFile) {
+      formData.append('deviation[artwork]', this.state.artworkFile);
+    }
 
     this.props.createDeviation(formData)
       .then(({deviation}) => this.props.history.push(`/deviations/${deviation.id}`));
@@ -56,6 +58,14 @@ class DeviationCreateForm extends React.Component {
         <img src={this.state.artworkUrl} />
       </div> 
       : null;
+
+    const displayErrors = (
+        <ul className='errors'>
+            {this.props.errors.map((error, index) => (
+                <li key={index}>{error}</li>
+            ))}
+        </ul>
+    )
     return (
       <div className='create-page'>
         <div className='create-form-content'>
@@ -75,6 +85,9 @@ class DeviationCreateForm extends React.Component {
               onChange={this.handleInput('description')}
             />
             <button>SUBMIT</button>
+            
+            {displayErrors}
+
           </form>
           <span 
             className='exit-create'

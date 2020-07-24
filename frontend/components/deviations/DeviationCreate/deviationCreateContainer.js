@@ -4,6 +4,7 @@ import DeviationCreateForm from './deviationCreateForm';
 
 const mSTP = (state) => ({
   currentUser: state.entities.users[state.session.id],
+  errors: state.errors.deviations,
 });
 
 const mDTP = dispatch => ({
