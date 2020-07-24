@@ -8,6 +8,10 @@ class Deviation < ApplicationRecord
 
     has_one_attached :artwork
 
+    has_many :user_favorites,
+      foreign_key: :deviation_id,
+      class_name: :Favorite
+
     has_many :comments,
         foreign_key: :deviation_id,
         class_name: :Comment
