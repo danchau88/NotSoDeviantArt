@@ -31,14 +31,19 @@
 .options-bar button {
     border: none;
     color: $readable-gray;
+    font-size: 15;
     font-family: sans-serif;
-    margin: 5px;
+    padding: 5px;
     background-color: transparent;
 }
 
 .options-bar button:hover {
     color: $emerald-green;
     cursor: pointer;
+}
+
+.options-bar span {
+  color: $readable-gray;
 }
 
 .dev-show-content {

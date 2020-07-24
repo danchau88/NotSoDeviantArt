@@ -27,7 +27,7 @@ class DeviationShow extends React.Component{
     }
     
     render() {
-        const {deviation, favorites, favorited, users, artist, comments, currentUser,
+        const {deviation, favoriteId, favorited, users, artist, comments, currentUser,
            createFavorite, createComment, deleteComment, deleteFavorite} = this.props
         
         //Makes sure that these things are loaded
@@ -52,8 +52,15 @@ class DeviationShow extends React.Component{
         };
 
         let favoriteStatus;
-          favorited === false ? <button><i className="far fa-star"></i>{` ADD TO FAVORITES`}</button> : 
-            <button><i className="fas fa-star"></i>{` ADD TO FAVORITES`}</button>
+          favorited === false ? 
+            favoriteStatus = 
+              <button onClick={() => createFavorite({deviation_id: deviation.id, user_id: currentUser.id})}>
+                <i className="far fa-star"></i>{` ADD TO FAVORITES`}
+              </button> : 
+            favoriteStatus = 
+              <button onClick={() => deleteFavorite(favoriteId)}>
+                <i className="fas fa-star"></i>{` ADD TO FAVORITES`}
+              </button>
 
         return(
             <div className='dev-show'>

@@ -1,5 +1,5 @@
 export const postFavorite = favorite => $.ajax({
-  url: "/api/favorites",
+  url: `/api/deviations/${favorite.deviation_id}/favorites`,
   method: "POST",
   data: {favorite}
 });

@@ -9,9 +9,13 @@ import { createFavorite, destroyFavorite, clearAllFavorites } from '../../../act
 const mSTP = (state, ownProps) => {
     const deviation = state.entities.deviations[ownProps.match.params.id];
     let favorited = false
+    let favoriteId = null
       //this is to see if current user is inside
-      for (let i=0; i < state.entities.favorites.length; i++) {
-        if (state.session.id === state.entities.favorites[i].user_id) {favorited = true};
+      for (let i=0; i < Object.values(state.entities.favorites).length; i++) {
+        if (state.session.id === Object.values(state.entities.favorites)[i].user_id) {
+          favorited = true
+          favoriteId = Object.values(state.entities.favorites)[i].id
+        };
       }
     return {
         deviation: deviation,
@@ -20,7 +24,8 @@ const mSTP = (state, ownProps) => {
         users: state.entities.users,
         currentUser: state.entities.users[state.session.id],
         favorites: state.entities.favorites,
-        favorited: favorited
+        favorited: favorited,
+        favoriteId: favoriteId,
     }
 };
 
