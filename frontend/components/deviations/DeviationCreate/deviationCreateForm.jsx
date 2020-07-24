@@ -29,7 +29,9 @@ class DeviationCreateForm extends React.Component {
     formData.append('deviation[description]', this.state.description);
     formData.append('deviation[artwork]', this.state.artworkFile);
 
-    this.props.createDeviation(formData);
+    this.props.createDeviation(formData)
+      .then(({deviation}) => this.props.history.push(`/deviations/${deviation.id}`));
+      //need .then and {deviation} to access the deviation's ID of what was submitted and route to show page
   }
 
   handleFile(e) {
