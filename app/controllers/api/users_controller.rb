@@ -13,6 +13,9 @@ class Api::UsersController < ApplicationController
         @user = User.new(user_params)   
         if @user.save
            login(@user)
+           @comments = @user.comments
+           @deviations = @user.deviations
+           @favorites = @user.favorite_deviations
            render :show  
         else
            render json: @user.errors.full_messages, status: 422
