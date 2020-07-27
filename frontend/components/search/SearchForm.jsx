@@ -19,6 +19,7 @@ class SearchForm extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
+        this.props.history.push("/")
         this.props.findDeviations(this.state.title)
     }
 

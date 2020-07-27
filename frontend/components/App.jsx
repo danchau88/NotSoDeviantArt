@@ -9,6 +9,7 @@ import DeviationsIndexContainer from "./deviations/DeviationsIndex/DeviationsInd
 import DeviationShowContainer from "./deviations/DeviationShow/DeviationShowContainer";
 import SearchContainer from "./search/SearchContainer";
 import deviationCreateContainer from "./deviations/DeviationCreate/deviationCreateContainer.js";
+import UserShowContainer from "./users/UserShowContainer.js";
 
 //Will Change this later for a more proper Explore
 function randomInteger(min, max) {
@@ -73,6 +74,7 @@ class App extends React.Component {
         <div className='navbar-offset'>
           <Switch>
             <Route path="/deviations/:id" component={DeviationShowContainer} />
+            <Route path="/users/:id" component={UserShowContainer} />
             <ProtectedRoute path="/create/deviation" component={deviationCreateContainer} />
             <AuthRoute path="/login" component={LoginFormContainer} />
             <AuthRoute path="/signup" component={SignupFormContainer} />

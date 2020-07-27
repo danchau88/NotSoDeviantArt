@@ -1,4 +1,5 @@
 import {RECEIVE_ALL_DEVIATIONS, RECEIVE_DEVIATION, REMOVE_DEVIATION} from '../actions/deviations_actions';
+import { RECEIVE_USER } from '../actions/users.actions';
 
 export default (state = {}, action) => {
     Object.freeze(state);
@@ -9,6 +10,8 @@ export default (state = {}, action) => {
         case RECEIVE_DEVIATION:
             nextState[action.deviation.id] = action.deviation;
             return nextState;
+        case RECEIVE_USER:
+            return action.deviations;
         case REMOVE_DEVIATION:
             delete nextState[action.deviationId];
             return nextState;

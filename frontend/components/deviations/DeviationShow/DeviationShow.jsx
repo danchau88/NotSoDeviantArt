@@ -1,6 +1,7 @@
 import React from 'react';
 import CommentForm from './CommentForm';
 import CommentItem from './CommentItem';
+import { Link } from 'react-router-dom';
 // import FullImage from './FullImage';
 
 class DeviationShow extends React.Component{
@@ -77,11 +78,14 @@ class DeviationShow extends React.Component{
                     <header>
                         <h2>{deviation.title}</h2>
                         <span>BY
-                            <h3>{artist.username}
+                            <h3>
+                              <Link to={`/users/${artist.id}`} >
+                                {artist.username}
                                 <span className="fa-stack">
-                                    <i className="fas fa-circle fa-stack-2x"></i>
-                                    <i className="fas fa-star fa-stack-1x fa-inverse"></i>
+                                  <i className="fas fa-circle fa-stack-2x"></i>
+                                  <i className="fas fa-star fa-stack-1x fa-inverse"></i>
                                 </span>
+                              </Link>
                             </h3>
                         </span>
                     </header>
