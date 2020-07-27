@@ -63,6 +63,10 @@
     font-size: small;
 }
 
+.dev-show-content span h3:hover {
+  color: $kinda-white;
+}
+
 .dev-show-content span .fa-stack {
     font-size: 6px;
     margin-left: 3px;

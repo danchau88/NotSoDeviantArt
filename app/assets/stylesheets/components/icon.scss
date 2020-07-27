@@ -31,10 +31,23 @@
     bottom: 1px;
 }
 
+//Deviation Index username 
+.dii-username span .fa-star {
+  color: $kinda-white;
+  font-size: 11px;
+}
+
+//Deviation Show username
+.dev-show-content span .fa-star {
+  color: $kinda-white;
+  font-size: 11px;
+}
+
 .fa-circle {
     color: red;
 }
 
+//Default is for favorite
 .fa-star {
     color: $kinda-white;
     font-size: 15px;

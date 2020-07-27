@@ -1,0 +1,40 @@
+.user-show {
+  color: $kinda-white;
+  display: flex;
+  flex-direction: column;
+}
+
+.user-show h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.user-show h2 .fa-circle {
+  color: red;
+  font-size: 18px;
+  margin-left: 3px;
+
+}
+
+.user-show h2 .fa-star {
+  color: $kinda-white;
+  font-size: 13px;
+  top: 2px;
+  margin-left: 4px;
+}
+
+.user-show h4 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.user-devs img {
+  height: 250px;
+  margin-bottom: 5px;
+}
+
+.none-yet {
+  color: $readable-gray;
+}
