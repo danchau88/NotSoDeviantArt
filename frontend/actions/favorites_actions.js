@@ -26,5 +26,5 @@ export const clearAllFavorites = () => ({
 export const createFavorite = (favorite) => dispatch => postFavorite(favorite)
     .then(newFavorite => dispatch(receiveFavorite(newFavorite)))
 
-export const destroyFavorite = (favoriteId) => dispatch => deleteFavorite(favoriteId)
-    .then(() => dispatch(removeFavorite(favoriteId)));
+export const destroyFavorite = (favorite_params) => dispatch => deleteFavorite(favorite_params)
+    .then(() => dispatch(removeFavorite(favorite_params.deviationId)));

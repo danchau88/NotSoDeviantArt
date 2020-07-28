@@ -5,8 +5,11 @@ class Api::FavoritesController < ApplicationController
   end
 
   def destroy
-    @favorite = Favorite.find_by(id: params[:id])
+    @favorite = Favorite.find_by(deviation_id: params[:deviation_id], user_id: params[:user_id]) #this is so for deleting in frontend
     @favorite.destroy
+
+    # for custom delete message (passes to action as favoriteId)
+    render json: {favoriteId: @favorite.id}
   end
 
   private

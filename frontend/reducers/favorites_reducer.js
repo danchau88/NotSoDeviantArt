@@ -1,5 +1,6 @@
 import {RECEIVE_FAVORITE, REMOVE_FAVORITE, CLEAR_ALL_FAVORITES} from '../actions/favorites_actions';
 import {RECEIVE_DEVIATION} from '../actions/deviations_actions';
+import { RECEIVE_USER } from '../actions/users.actions';
 
 export default (state={}, action) => {
   Object.freeze(state);
@@ -10,6 +11,8 @@ export default (state={}, action) => {
       case RECEIVE_FAVORITE:
           nextState[action.favorite.id] = action.favorite
           return nextState;
+      case RECEIVE_USER:
+          return action.favorites
       case REMOVE_FAVORITE:
           delete nextState[action.favoriteId]
           return nextState;

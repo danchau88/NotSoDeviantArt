@@ -11,6 +11,7 @@ import SearchContainer from "./search/SearchContainer";
 import deviationCreateContainer from "./deviations/DeviationCreate/deviationCreateContainer.js";
 import UserShowContainer from "./users/UserShowContainer.js";
 import PersonalPageContainer from "./users/PersonalPageContainer.js";
+import FavoritesPageContainer from "./favorites/FavoritesPageContainer.js";
 
 //Will Change this later for a more proper Explore
 function randomInteger(min, max) {
@@ -53,7 +54,7 @@ class App extends React.Component {
             <div className='dropdown'>
               <button className="nav-button" id='more'>MORE</button>
               <div className='dropdown-content'>
-                <button>FAVORITES</button>
+                <button className='drop-button'><Link to='/myfavorites'>FAVORITES</Link></button>
                 
                 <button className='drop-button'>
                   <Link onClick={this.randomDeviationId} to={`/deviations/${this.state.randomInteger}`}>
@@ -77,6 +78,7 @@ class App extends React.Component {
             <Route path="/deviations/:id" component={DeviationShowContainer} />
             <Route path="/users/:id" component={UserShowContainer} />
             <Route path="/mypage" component={PersonalPageContainer} />
+            <Route path="/myfavorites" component={FavoritesPageContainer} />
             <ProtectedRoute path="/create/deviation" component={deviationCreateContainer} />
             <AuthRoute path="/login" component={LoginFormContainer} />
             <AuthRoute path="/signup" component={SignupFormContainer} />

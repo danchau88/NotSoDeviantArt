@@ -11,6 +11,9 @@ Rails.application.routes.draw do
       resources :comments, only: [:index] 
     end
     resources :comments, only: [:show, :destroy, :create, :update]
-    resources :favorites, only: [:destroy]
+    # resources :favorites, only: [:destroy]
+    
+    #custom destroy route
+    delete "/favorites", to: "favorites#destroy"
   end
 end

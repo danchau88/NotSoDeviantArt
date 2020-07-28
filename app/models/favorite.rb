@@ -5,7 +5,7 @@ class Favorite < ApplicationRecord
     foreign_key: :user_id,
     class_name: :User
   
-    belongs_to :deviation,
+  belongs_to :deviation,
     foreign_key: :deviation_id,
     class_name: :Deviation
     

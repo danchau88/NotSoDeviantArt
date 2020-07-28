@@ -45,8 +45,13 @@ class User < ApplicationRecord
     has_many :deviation_comments,
         through: :deviations,
         source: :comments
-
-    has_many :favorite_deviations,
+    
+    has_many :favorites,
         foreign_key: :user_id,
         class_name: :Favorite
+
+    has_many :favorite_deviations,
+        through: :favorites,
+        source: :deviation
+
 end
