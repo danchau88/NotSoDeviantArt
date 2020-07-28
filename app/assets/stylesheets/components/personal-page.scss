@@ -1,0 +1,46 @@
+.personal-page {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.personal-page h1 {
+  color: $kinda-white;
+  font-family: 'Odibee Sans', cursive;
+  background-color: $dirty-dark-aqua;
+  letter-spacing: 2px;
+  padding: 10px;
+}
+
+.personal-page h4 {
+  color: $kinda-white;
+}
+
+.personal-page li {
+  display: flex;
+  flex-direction: column;
+}
+
+.options-pages button {
+  border: none;
+  background-color: $barely-gray;
+  color: $kinda-white;
+  border-left: 1px solid $pretty-black;
+  padding: 10px;
+}
+
+.options-pages button:hover {
+  color: $deviant-green;
+  cursor: pointer;
+}
+
+#delete-dev {
+  border: none;
+  font-family: 'Kanit', sans-serif;
+  color: $readable-gray;
+  background-color: transparent;
+}
+
+#delete-dev:hover {
+  color: $kinda-red;
+}

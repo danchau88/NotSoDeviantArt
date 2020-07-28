@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom';
 export default ({currentUser, logout}) => {
     const display = currentUser ? (
         <div className='logged-in'>
-           <Link to='/'>
+           <Link to='/mypage'>
                 <h3><i className="fas fa-user-ninja"></i>{currentUser.username}</h3>
            </Link>
            <div className='dropdown-content'>     
