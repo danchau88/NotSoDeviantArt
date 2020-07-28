@@ -41,7 +41,12 @@ class DeviationShow extends React.Component{
         );
 
         const commentsList = comments.map(comment => (
-            <CommentItem key={comment.id} comment={comment} author={users[comment.author_id]} deleteComment={deleteComment} /> 
+            <CommentItem key={comment.id}
+              comment={comment} 
+              author={users[comment.author_id]} 
+              deleteComment={deleteComment} 
+              currentUser={currentUser}
+            /> 
         ));
         
         let newCommentForm;

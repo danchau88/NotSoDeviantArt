@@ -19,9 +19,10 @@
 .personal-page li {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
 }
 
-.options-pages button {
+.top-bar {
   border: none;
   background-color: $barely-gray;
   color: $kinda-white;
@@ -29,18 +30,18 @@
   padding: 10px;
 }
 
-.options-pages button:hover {
+.top-bar:hover {
   color: $deviant-green;
   cursor: pointer;
 }
 
-#delete-dev {
+.delete-dev {
   border: none;
   font-family: 'Kanit', sans-serif;
   color: $readable-gray;
   background-color: transparent;
 }
 
-#delete-dev:hover {
+.delete-dev:hover {
   color: $kinda-red;
 }

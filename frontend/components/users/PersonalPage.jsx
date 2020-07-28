@@ -15,7 +15,7 @@ class PersonalPage extends React.Component {
         return <li key={deviation.id}>
           <h4>{deviation.title}</h4>
           <Link to={`/deviations/${deviation.id}`}><img src={deviation.artworkUrl} /></Link>
-          <button onClick={ () => deleteDeviation(deviation.id) } id="delete-dev" >DELETE</button>
+          <button onClick={ () => deleteDeviation(deviation.id) } className="delete-dev" >DELETE</button>
         </li>
       }
     })
@@ -24,8 +24,8 @@ class PersonalPage extends React.Component {
       <div className="personal-page">
         <h1>{currentUser.username}</h1>
         <div className="options-pages">
-          <button>MY DEVIATION</button>
-          <button>FAVORITES</button>
+          <button className="top-bar">MY DEVIATION</button>
+          <button className="top-bar">FAVORITES</button>
         </div>
         <ul className="user-devs">
           {deviationItems}

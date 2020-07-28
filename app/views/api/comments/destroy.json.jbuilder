@@ -1,3 +1,1 @@
-json.comment do
-    json.extract! @comment, :id
-end
+json.extract! @comment, :id

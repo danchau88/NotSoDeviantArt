@@ -3,7 +3,13 @@ import React from 'react';
 class CommentItem extends React.Component{
 
     render(){
-        const {comment, author, deleteComment} = this.props 
+        const {currentUser, comment, author, deleteComment} = this.props 
+
+        let deleteOption;
+        currentUser.id === author.id ? (
+          deleteOption = <button className onClick={() => deleteComment(comment.id) }>DELETE</button>)
+          : (deleteOption = null)
+      
         return(
             <li>
                 <i className="fas fa-user-astronaut"></i>
@@ -17,6 +23,7 @@ class CommentItem extends React.Component{
                 </label>
                 <p>{comment.body}</p>
                 </div>
+              {deleteOption}
             </li>
         )
     }
