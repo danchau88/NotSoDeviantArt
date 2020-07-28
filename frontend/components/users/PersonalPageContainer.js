@@ -1,5 +1,6 @@
 import {connect} from "react-redux";
 import { getUser } from "../../actions/users.actions";
+import { deleteDeviation } from "../../actions/deviations_actions";
 import PersonalPage from "./PersonalPage";
 
 const mSTP = (state) => ({
@@ -9,6 +10,7 @@ const mSTP = (state) => ({
 
 const mDTP = dispatch => ({
   getUser: (userId) => dispatch(getUser(userId)),
+  deleteDeviation: (deviationId) => dispatch(deleteDeviation(deviationId)),
 })
 
 export default connect(mSTP, mDTP)(PersonalPage);

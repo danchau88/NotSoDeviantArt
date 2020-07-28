@@ -39,7 +39,7 @@ class Api::DeviationsController < ApplicationController
     def destroy
         @deviation = Deviation.find(params[:id])
         if @deviation.destroy
-            render :index
+            render :destroy
         else
             render json: ["You can't destroy something that doesn't exist."]
         end

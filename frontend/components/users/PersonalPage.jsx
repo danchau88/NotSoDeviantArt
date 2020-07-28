@@ -8,14 +8,14 @@ class PersonalPage extends React.Component {
   }
 
   render() {
-    const { currentUser, deviations } = this.props;
+    const { currentUser, deviations, deleteDeviation } = this.props;
     let deviationItems;
     deviationItems = deviations.map((deviation) => {
       if (currentUser.id === deviation.artist_id) {
         return <li key={deviation.id}>
           <h4>{deviation.title}</h4>
           <Link to={`/deviations/${deviation.id}`}><img src={deviation.artworkUrl} /></Link>
-          <button id="delete-dev" >DELETE</button>
+          <button onClick={ () => deleteDeviation(deviation.id) } id="delete-dev" >DELETE</button>
         </li>
       }
     })
