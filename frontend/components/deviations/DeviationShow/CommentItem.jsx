@@ -1,15 +1,24 @@
 import React from 'react';
+import EditComment from './EditComment';
 
 class CommentItem extends React.Component{
+    // goToEdit() {
+
+    // }
 
     render(){
-        const {currentUser, comment, author, deleteComment} = this.props 
+        const { currentUser, comment, author, deleteComment, updateComment } = this.props 
 
         let deleteOption;
         currentUser.id === author.id ? (
-          deleteOption = <button className onClick={() => deleteComment(comment.id) }>DELETE</button>)
+          deleteOption = <button className="del-comment" onClick={() => deleteComment(comment.id) }>DELETE</button>)
           : (deleteOption = null)
-      
+        
+        let editOption;
+        currentUser.id === author.id ? (
+          editOption = <button className="edit-comment" onClick={() => goToEdit() }>EDIT</button>)
+          : (editOption = null)
+
         return(
             <li>
                 <i className="fas fa-user-astronaut"></i>
@@ -23,7 +32,10 @@ class CommentItem extends React.Component{
                 </label>
                 <p>{comment.body}</p>
                 </div>
-              {deleteOption}
+                <div>
+                    {editOption}
+                    {deleteOption}
+                </div>
             </li>
         )
     }

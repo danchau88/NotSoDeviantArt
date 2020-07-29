@@ -29,7 +29,7 @@ class DeviationShow extends React.Component{
     
     render() {
         const {deviation, favoriteId, favorited, users, artist, comments, currentUser,
-           createFavorite, createComment, deleteComment, deleteFavorite} = this.props
+           createFavorite, createComment, updateComment, deleteComment, deleteFavorite} = this.props
         
         //Makes sure that these things are loaded
         if (!deviation || !artist || !comments) return (
@@ -43,7 +43,8 @@ class DeviationShow extends React.Component{
         const commentsList = comments.map(comment => (
             <CommentItem key={comment.id}
               comment={comment} 
-              author={users[comment.author_id]} 
+              author={users[comment.author_id]}
+              updateComment={updateComment} 
               deleteComment={deleteComment} 
               currentUser={currentUser}
             /> 
