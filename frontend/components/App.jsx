@@ -12,6 +12,7 @@ import deviationCreateContainer from "./deviations/DeviationCreate/deviationCrea
 import UserShowContainer from "./users/UserShowContainer.js";
 import PersonalPageContainer from "./users/PersonalPageContainer.js";
 import FavoritesPageContainer from "./favorites/FavoritesPageContainer.js";
+import EditCommentContainer from "./deviations/DeviationShow/EditCommentContainer.js";
 
 //Will Change this later for a more proper Explore
 function randomInteger(min, max) {
@@ -79,6 +80,7 @@ class App extends React.Component {
             <Route path="/users/:id" component={UserShowContainer} />
             <Route path="/mypage" component={PersonalPageContainer} />
             <Route path="/myfavorites" component={FavoritesPageContainer} />
+            <Route path="/comments/:id/edit" component={EditCommentContainer} />
             <ProtectedRoute path="/create/deviation" component={deviationCreateContainer} />
             <AuthRoute path="/login" component={LoginFormContainer} />
             <AuthRoute path="/signup" component={SignupFormContainer} />
