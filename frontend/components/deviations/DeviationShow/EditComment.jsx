@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default class EditForm extends React.Component {
+export default class EditComment extends React.Component {
     constructor(props){
       super(props);
     }
