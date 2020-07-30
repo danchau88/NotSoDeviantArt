@@ -3,6 +3,11 @@ export const fetchAllComments = (deviationId) => $.ajax({
     method: "GET"
 });
 
+export const fetchComment = commentId => $.ajax({
+    url: `/api/comments/${commentId}`,
+    method: "GET"
+});
+
 export const postComment = comment => $.ajax({
     url: "/api/comments",
     method: "POST",

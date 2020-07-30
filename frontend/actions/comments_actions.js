@@ -1,8 +1,9 @@
-import { postComment, patchComment, deleteComment, fetchAllComments } from '../util/comments_api_util';
+import { postComment, patchComment, deleteComment, fetchAllComments, fetchComment } from '../util/comments_api_util';
 
 export const RECEIVE_ALL_COMMENTS = "RECEIVE_ALL_COMMENTS";
 export const RECEIVE_COMMENT = "RECEIVE_COMMENT";
 export const REMOVE_COMMENT = "REMOVE_COMMENT";
+export const RECEIVE_COMMENT_ERRORS = "RECEIVE_COMMENT_ERRORS";
 export const CLEAR_ALL_COMMENTS = "CLEAR_ALL_COMMENTS";
 
 const receiveAllComments = ({comments, users}) => {
@@ -27,6 +28,13 @@ const removeComment = commentId => {
     }
 }
 
+const receiveCommentErrors = errors => {
+    return {
+        type: RECEIVE_COMMENT_ERRORS,
+        errors
+    }
+}
+
 export const clearAllComments = () => ({
     type: CLEAR_ALL_COMMENTS
 })
@@ -34,12 +42,16 @@ export const clearAllComments = () => ({
 export const getAllComments = (deviationId) => dispatch => fetchAllComments(deviationId)
     .then(comments => dispatch(receiveAllComments(comments)));
 
+export const getComment = (commentId) => dispatch => fetchComment(commentId)
+    .then(comment => dispatch(receiveComment(comment)));
+
 export const createComment = (comment) => dispatch => postComment(comment)
     .then(newComment => dispatch(receiveComment(newComment)))
-    .fail(errors => console.log(errors.responseJSON));
+    .fail(errors => dispatch(receiveCommentErrors(errors.responseJSON)));
 
 export const updateComment = (comment) => dispatch => patchComment(comment)
-    .then(updatedComment => dispatch(receiveComment(updatedComment)));
+    .then(updatedComment => dispatch(receiveComment(updatedComment)))
+    .fail(errors => dispatch(receiveCommentErrors(errors.responseJSON)));
 
 export const destroyComment = (commentId) => dispatch => deleteComment(commentId)
     .then(() => dispatch(removeComment(commentId)));

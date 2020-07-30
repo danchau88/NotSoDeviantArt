@@ -4,6 +4,11 @@ class Api::CommentsController < ApplicationController
         render :index
     end
 
+    def show
+        @comment = Comment.find_by(id: params[:id])
+        render :show
+    end
+
     def create
         @comment = Comment.new(comment_params)
         @comment.author_id = current_user.id

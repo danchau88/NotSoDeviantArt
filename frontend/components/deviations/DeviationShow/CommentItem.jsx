@@ -1,5 +1,6 @@
 import React from 'react';
-import EditComment from './EditComment';
+import { withRouter } from 'react-router'; //gives access to history, match, location
+// import EditComment from './EditComment';
 
 class CommentItem extends React.Component{
 
@@ -17,7 +18,7 @@ class CommentItem extends React.Component{
         
         let editOption;
         currentUser.id === author.id ? (
-          editOption = <button className="edit-comment" onClick={() => handleEdit()}>EDIT</button>)
+          editOption = <button className="edit-comment" onClick={() => this.handleEdit()}>EDIT</button>)
           : (editOption = null)
 
         return(
@@ -42,4 +43,4 @@ class CommentItem extends React.Component{
     }
 }
 
-export default CommentItem;
+export default withRouter(CommentItem);
