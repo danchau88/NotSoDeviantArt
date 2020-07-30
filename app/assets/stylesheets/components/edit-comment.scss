@@ -10,3 +10,40 @@
   justify-content: center;
 }
 
+.edit-comment-content{
+  height: 50%;
+  width: 70%;
+}
+
+.edit-comment-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 90%;
+  // width: 80%;
+}
+
+.edit-comment-form textarea {
+  height: 40%;
+  width: 50%;
+  font-size: 15px;
+  color: $kinda-white;
+  background-color: $barely-gray;
+}
+
+.edit-comment-btn {
+  background-color: transparent;
+  border: none;
+  font-family: 'Kanit', sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  letter-spacing: 1px;
+  color: $emerald-green;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+.edit-comment-btn:hover {
+  color: $translucent-light-green;
+}

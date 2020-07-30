@@ -34,7 +34,7 @@ class CommentItem extends React.Component{
                 </label>
                 <p>{comment.body}</p>
                 </div>
-                <div>
+                <div className="comment-options">
                     {editOption}
                     {deleteOption}
                 </div>

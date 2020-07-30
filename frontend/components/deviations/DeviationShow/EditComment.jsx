@@ -41,9 +41,9 @@ export default class EditComment extends React.Component {
     return (
       <div className='edit-bg'>
         <div className='edit-comment-content'>
-          <form onSubmit={this.handleSubmit}>
+          <form className="edit-comment-form" onSubmit={this.handleSubmit}>
             <textarea value={this.state.body} onChange={this.handleInput('body')}></textarea>
-            <button>EDIT</button>
+            <button className="edit-comment-btn">EDIT</button>
           </form>
         </div>
       </div>

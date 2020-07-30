@@ -66,12 +66,32 @@
     font-size: x-large;
 }
 
+.comment-options {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-left: 10px;
+  font-size: 15px;
+}
+
 .edit-comment {
   font-family: 'Kanit', sans-serif;
   background-color: $gray-aqua;
+  border: none;
+  cursor: pointer;
+}
+
+.edit-comment:hover {
+  color: white;
 }
 
 .del-comment {
   font-family: 'Kanit', sans-serif;
   background-color: $gray-aqua;
+  border: none;
+  cursor: pointer;
+}
+
+.del-comment:hover {
+  color: $kinda-red;
 }
