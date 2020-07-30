@@ -1,13 +1,13 @@
 import { connect } from 'react-redux';
 import EditComment from './EditComment';
-import { getAllComments, updateComment } from '../../../actions/comments_actions';
+import { getComment, updateComment } from '../../../actions/comments_actions';
 
 const mSTP = (state, ownProps) => ({
   comment: state.entities.comments[ownProps.match.params.id],
 }); 
 
 const mDTP = dispatch => ({
-  getAllComments: (deviationId) => dispatch(getAllComments(deviationId)),
+  getComment: (commentId) => dispatch(getComment(commentId)),
   updateComment: (comment) => dispatch(updateComment(comment)),
 })
 

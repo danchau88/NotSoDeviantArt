@@ -9,8 +9,8 @@ class CommentItem extends React.Component{
     }
 
     render(){
-        const { currentUser, comment, author, deleteComment } = this.props 
-        
+        const { currentUser, comment, author, deleteComment, updateComment } = this.props 
+        // const editForm = <EditComment author={author} comment={comment} updateComment={updateComment} />
         let deleteOption;
         currentUser.id === author.id ? (
           deleteOption = <button className="del-comment" onClick={() => deleteComment(comment.id) }>DELETE</button>)
@@ -43,4 +43,5 @@ class CommentItem extends React.Component{
     }
 }
 
+// export default CommentItem;
 export default withRouter(CommentItem);

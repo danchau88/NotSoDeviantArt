@@ -2,6 +2,7 @@ import React from 'react';
 import CommentForm from './CommentForm';
 import CommentItem from './CommentItem';
 import { Link } from 'react-router-dom';
+// import EditComment from './EditComment';
 // import FullImage from './FullImage';
 
 class DeviationShow extends React.Component{
@@ -30,7 +31,7 @@ class DeviationShow extends React.Component{
     
     render() {
         const {deviation, favoriteId, favorited, users, artist, comments, currentUser,
-           createFavorite, createComment, deleteComment, deleteFavorite} = this.props
+          createComment, deleteComment, updateComment, createFavorite, deleteFavorite} = this.props
         
         //Makes sure that these things are loaded
         if (!deviation || !artist || !comments) return (
@@ -43,9 +44,11 @@ class DeviationShow extends React.Component{
 
         const commentsList = comments.map(comment => (
             <CommentItem key={comment.id}
-              comment={comment} 
+              comment={comment}
+              deviation={deviation} 
               author={users[comment.author_id]}
-              deleteComment={deleteComment} 
+              deleteComment={deleteComment}
+              updateComment={updateComment} 
               currentUser={currentUser}
             /> 
         ));
