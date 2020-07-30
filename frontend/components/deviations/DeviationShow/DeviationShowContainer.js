@@ -2,7 +2,7 @@ import {connect} from 'react-redux';
 import DeviationShow from './DeviationShow';
 import { getDeviation } from '../../../actions/deviations_actions';
 import { getUser } from '../../../actions/users.actions';
-import { createComment, destroyComment, clearAllComments, updateComment } from '../../../actions/comments_actions';
+import { createComment, destroyComment, clearAllComments } from '../../../actions/comments_actions';
 import { createFavorite, destroyFavorite, clearAllFavorites } from '../../../actions/favorites_actions';
 
 
@@ -33,7 +33,6 @@ const mDTP = dispatch => ({
     getDeviation: (deviationId) => dispatch(getDeviation(deviationId)),
     getUser: (userId) => dispatch(getUser(userId)),
     createComment: (comment) => dispatch(createComment(comment)),
-    updateComment: (comment) => dispatch(updateComment(comment)),
     deleteComment: (commentId) => dispatch(destroyComment(commentId)),
     clearAllComments: () => dispatch(clearAllComments()),
     createFavorite: (favorite) => dispatch(createFavorite(favorite)),

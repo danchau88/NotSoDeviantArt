@@ -3,18 +3,22 @@ import EditComment from './EditComment';
 
 class CommentItem extends React.Component{
 
-    render(){
-        const { currentUser, comment, author, deleteComment, updateComment } = this.props 
+    handleEdit(){
+      this.props.history.push(`/comments/${this.props.comment.id}/edit`)
+    }
 
+    render(){
+        const { currentUser, comment, author, deleteComment } = this.props 
+        
         let deleteOption;
         currentUser.id === author.id ? (
           deleteOption = <button className="del-comment" onClick={() => deleteComment(comment.id) }>DELETE</button>)
           : (deleteOption = null)
         
-        // let editOption;
-        // currentUser.id === author.id ? (
-        //   editOption = <button className="edit-comment" onClick={() =>  }>EDIT</button>)
-        //   : (editOption = null)
+        let editOption;
+        currentUser.id === author.id ? (
+          editOption = <button className="edit-comment" onClick={() => handleEdit()}>EDIT</button>)
+          : (editOption = null)
 
         return(
             <li>

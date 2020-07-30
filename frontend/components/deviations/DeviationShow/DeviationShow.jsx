@@ -14,7 +14,8 @@ class DeviationShow extends React.Component{
         this.props.getDeviation(this.props.match.params.id)
         .then(() => this.props.getUser(this.props.deviation.artist_id))
     }
-
+    
+    //this is for updating information when going to different deviation_id show page from current show page
     componentDidUpdate(prevProps){
         if (this.props.match.params.id !== prevProps.match.params.id) {
             this.props.getDeviation(this.props.match.params.id)
@@ -29,7 +30,7 @@ class DeviationShow extends React.Component{
     
     render() {
         const {deviation, favoriteId, favorited, users, artist, comments, currentUser,
-           createFavorite, createComment, updateComment, deleteComment, deleteFavorite} = this.props
+           createFavorite, createComment, deleteComment, deleteFavorite} = this.props
         
         //Makes sure that these things are loaded
         if (!deviation || !artist || !comments) return (
@@ -44,7 +45,6 @@ class DeviationShow extends React.Component{
             <CommentItem key={comment.id}
               comment={comment} 
               author={users[comment.author_id]}
-              updateComment={updateComment} 
               deleteComment={deleteComment} 
               currentUser={currentUser}
             /> 
