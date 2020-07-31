@@ -36,7 +36,7 @@ const mDTP = dispatch => ({
     deleteComment: (commentId) => dispatch(destroyComment(commentId)),
     clearAllComments: () => dispatch(clearAllComments()),
     createFavorite: (favorite) => dispatch(createFavorite(favorite)),
-    deleteFavorite: (favoriteId) => dispatch(destroyFavorite(favoriteId)),
+    deleteFavorite: (favorite_params) => dispatch(destroyFavorite(favorite_params)),
     clearAllFavorites: () => dispatch(clearAllFavorites()),
 });
 

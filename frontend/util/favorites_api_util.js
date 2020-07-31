@@ -4,12 +4,9 @@ export const postFavorite = favorite => $.ajax({
   data: {favorite}
 });
 
-export const deleteFavorite = ({deviationId, userId}) => $.ajax({
+export const deleteFavorite = (favorite) => $.ajax({
   url: `/api/favorites/`,
   method: "DELETE",
-  data: {
-    deviation_id: deviationId,
-    user_id: userId
-  }
+  data: {favorite}
 });
  
