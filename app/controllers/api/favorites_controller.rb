@@ -6,10 +6,12 @@ class Api::FavoritesController < ApplicationController
 
   def destroy
     @favorite = Favorite.find_by(favorite_params) #uses same params as create
-    @favorite.destroy
-
-    # for custom delete message (passes to action as favoriteId)
-    render json: {favoriteId: @favorite.id}
+    if @favorite.destroy
+      # for custom delete message (passes to action as favoriteId)
+      render :destroy
+    else
+      render @favorite.errors.full_messages, status: 422
+    end
   end
 
   private

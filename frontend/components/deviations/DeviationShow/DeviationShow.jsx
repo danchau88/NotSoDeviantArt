@@ -11,15 +11,17 @@ class DeviationShow extends React.Component{
     }
 
     componentDidMount(){
-        this.props.getDeviation(this.props.match.params.id)
-        .then(() => this.props.getUser(this.props.deviation.artist_id))
+      !this.props.currentUser ?
+        (this.props.getDeviation(this.props.match.params.id))
+      : (this.props.getUser(this.props.currentUser.id)
+        .then(() => this.props.getDeviation(this.props.match.params.id)))
     }
     
     //this is for updating information when going to different deviation_id show page from current show page
     componentDidUpdate(prevProps){
         if (this.props.match.params.id !== prevProps.match.params.id) {
             this.props.getDeviation(this.props.match.params.id)
-            .then(() => this.props.getUser(this.props.deviation.artist_id))
+            .then(() => this.props.getUser(this.props.currentUser.id))
         }
     }
 

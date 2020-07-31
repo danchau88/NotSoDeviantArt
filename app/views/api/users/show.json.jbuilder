@@ -13,7 +13,7 @@ end
 json.favorites do
   @favorites.each do |favorite|
       json.set! favorite.id do
-          json.partial! '/api/deviations/deviation', deviation: favorite
+          json.partial! '/api/favorites/favorite', favorite: favorite
           #blue deviation represents what its called in the partial
       end
   end

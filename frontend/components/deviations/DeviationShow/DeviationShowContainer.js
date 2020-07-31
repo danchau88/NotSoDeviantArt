@@ -10,13 +10,14 @@ const mSTP = (state, ownProps) => {
     const deviation = state.entities.deviations[ownProps.match.params.id];
     let favorited = false
     let favoriteId = null
-      //this is to see if current user is inside
-      for (let i=0; i < Object.values(state.entities.favorites).length; i++) {
-        if (state.session.id === Object.values(state.entities.favorites)[i].user_id) {
-          favorited = true
-          favoriteId = Object.values(state.entities.favorites)[i].id
-        };
+    const favArr = Object.values(state.entities.favorites)
+    //this is to see if current user is inside
+    for (let i=0; i < favArr.length; i++) {
+      if ( favArr[i].deviation_id.toString() === ownProps.match.params.id ) {
+        favorited = true
+        favoriteId = favArr[i].id
       }
+    }
     return {
         deviation: deviation,
         artist: deviation && state.entities.users[deviation.artist_id],

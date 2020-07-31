@@ -1,6 +1,5 @@
 import React from 'react';
 import { withRouter } from 'react-router'; //gives access to history, match, location
-// import EditComment from './EditComment';
 
 class CommentItem extends React.Component{
 
@@ -9,15 +8,15 @@ class CommentItem extends React.Component{
     }
 
     render(){
-        const { currentUser, comment, author, deleteComment, updateComment } = this.props 
-        // const editForm = <EditComment author={author} comment={comment} updateComment={updateComment} />
+        const { currentUser, comment, author, deleteComment } = this.props 
         let deleteOption;
-        currentUser.id === author.id ? (
+        // debugger
+        currentUser?.id === author.id ? (
           deleteOption = <button className="del-comment" onClick={() => deleteComment(comment.id) }>DELETE</button>)
           : (deleteOption = null)
         
         let editOption;
-        currentUser.id === author.id ? (
+        currentUser?.id === author.id ? (
           editOption = <button className="edit-comment" onClick={() => this.handleEdit()}>EDIT</button>)
           : (editOption = null)
 
