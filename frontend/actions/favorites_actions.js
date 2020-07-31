@@ -1,6 +1,8 @@
 import {postFavorite, deleteFavorite} from '../util/favorites_api_util';
+import { RECEIVE_ALL_DEVIATIONS } from './deviations_actions';
 
 export const RECEIVE_FAVORITE = "RECEIVE_FAVORITE";
+export const RECEIVE_FAVORITE_DEVIATIONS = "RECEIVE_FAVORITE_DEVIATIONS"
 export const REMOVE_FAVORITE = "REMOVE_FAVORITE";
 export const CLEAR_ALL_FAVORITES = "CLEAR_ALL_FAVORITES";
 
@@ -9,6 +11,14 @@ const receiveFavorite = (favorite) => {
   return {
       type: RECEIVE_FAVORITE,
       favorite
+  }
+}
+
+// dont need  thunk action
+export const receiveFavoriteDeviations = (deviations) => {
+  return {
+    type: RECEIVE_FAVORITE_DEVIATIONS,
+    deviations
   }
 }
 

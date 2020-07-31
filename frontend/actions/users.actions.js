@@ -10,12 +10,13 @@ export const receiveAllUsers = ({users}) => {
     }; 
 };
 
-export const receiveUser = ({ user, deviations, comments, favorites }) => {
+export const receiveUser = ({ user, deviations, favorite_deviations, comments, favorites }) => {
     return {
         type: RECEIVE_USER,
         deviations: deviations || {},
         comments: comments || {},
         favorites: favorites || {},
+        favorite_deviations: favorite_deviations || {},
         user: user || {}
     }; 
 };

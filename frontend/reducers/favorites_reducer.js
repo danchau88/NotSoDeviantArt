@@ -1,4 +1,4 @@
-import {RECEIVE_FAVORITE, REMOVE_FAVORITE, CLEAR_ALL_FAVORITES} from '../actions/favorites_actions';
+import {RECEIVE_FAVORITE, REMOVE_FAVORITE, CLEAR_ALL_FAVORITES, RECEIVE_FAVORITE_DEVIATIONS} from '../actions/favorites_actions';
 import {RECEIVE_DEVIATION} from '../actions/deviations_actions';
 import { RECEIVE_USER } from '../actions/users.actions';
 

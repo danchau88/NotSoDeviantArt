@@ -27,7 +27,8 @@ class Api::UsersController < ApplicationController
         if @user
             @comments = @user.comments
             @deviations = @user.deviations
-            @favorites = @user.favorite_deviations
+            @favorites = @user.favorites
+            @favorite_deviations = @user.favorite_deviations
             render :show
         else
             render json: ["Unable to find user"], status: 404 

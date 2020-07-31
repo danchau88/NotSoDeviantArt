@@ -19,13 +19,13 @@ json.favorites do
   end
 end
 
-# json.favorite_deviations do
-#   @favorites.each do |favorite|
-#     json.set! favorite.deviation_id do
-#       json.partial! '/api/deviations/deviation', favorite_deviation: favorite_deviation
-#     end
-#   end
-# end
+json.favorite_deviations do
+  @favorite_deviations.each do |favorite_deviation|
+    json.set! favorite_deviation.id do
+      json.partial! '/api/deviations/deviation', deviation: favorite_deviation
+    end
+  end
+end
 
 json.deviations do
   @deviations.each do |deviation|
