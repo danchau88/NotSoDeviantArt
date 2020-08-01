@@ -11,7 +11,6 @@ export default class FavoritesPage extends React.Component {
 
     const { currentUser, favorites, deviations, destroyFavorite } = this.props;
     if (!currentUser || !favorites || !deviations) {return <div></div>}
-    // debugger
     let favoriteItems = favorites.map((favorite) => (
       <FavoriteItem key={favorite.id} 
         favorite={favorite} 

@@ -8,7 +8,10 @@ export default class FavoriteItem extends React.Component {
       <li className="fav-item">
         <h4>{favorite_deviation.title}</h4>
         <img src={favorite_deviation.artworkUrl} />
-        <button onClick={() => destroyFavorite({deviationId: favorite_deviation.id, userId: currentUser.id})} className="delete-fav" > REMOVE </button>
+        <button onClick={() => {
+            destroyFavorite({deviation_id: favorite_deviation.id, user_id: currentUser.id}) //params naming from backend
+          }
+        } className="delete-fav" > REMOVE </button>
       </li>
     )
   }
