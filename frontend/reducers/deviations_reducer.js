@@ -8,14 +8,11 @@ export default (state = {}, action) => {
     switch(action.type) {
         case RECEIVE_ALL_DEVIATIONS:
             return action.deviations;
-        case RECEIVE_FAVORITE_DEVIATIONS:
-            // return {...state, ...action.deviations}; // merges
-            return action.deviations;
         case RECEIVE_DEVIATION:
             nextState[action.deviation.id] = action.deviation;
             return nextState;
         case RECEIVE_USER:
-            return action.deviations;
+            return {...state, ...action.deviations, ...action.favorite_deviations};
         case REMOVE_DEVIATION:
             delete nextState[action.deviationId];
             return nextState;
