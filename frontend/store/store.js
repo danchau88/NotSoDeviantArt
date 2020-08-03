@@ -4,6 +4,7 @@ import thunk from 'redux-thunk';
 
 const middlewares = [thunk];
 
+// this is to make logger only in development, not showing in production
 if (process.env.NODE_ENV !== "production") {
   // must use 'require' (import only allowed at top of file)
   const { logger } = require("redux-logger");
