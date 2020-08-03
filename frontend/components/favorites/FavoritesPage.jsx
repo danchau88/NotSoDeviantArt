@@ -16,7 +16,7 @@ export default class FavoritesPage extends React.Component {
         </div></div>
       </div>
     )
-    
+
     let favoriteItems = favorites.map((favorite) => (
       <FavoriteItem key={favorite.id} 
         favorite={favorite} 
@@ -25,10 +25,10 @@ export default class FavoritesPage extends React.Component {
         destroyFavorite={destroyFavorite} 
       /> 
     ));
-    if (favoriteItems.length === 0) {return favoriteItems = <h2>No Favorites Yet...</h2>}
+    if (favoriteItems.length === 0) {return favoriteItems = <h2 className='no-fav'>No Favorites Yet...</h2>}
     return(
       <div className="favorites-pg">
-        <h1>MY FAVORITES</h1>
+        <h1 id="favorite-title">MY FAVORITES</h1>
         <div className="fav-content">
           <ul>
             {favoriteItems}
