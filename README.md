@@ -1,6 +1,6 @@
 ## README
 
-### NotSoDeviantArt, a deviantArt.com clone.
+### NotSoDeviantArt, a creative arts space with inspiration from DeviantArt.
 ![alt text](https://github.com/danchau88/NotSoDeviantArt/blob/master/app/assets/images/NotSoDeviantArtLogo.png "NotSoDeviantArt Logo 1")
 
 # WebApp
@@ -10,18 +10,20 @@ NotSoDeviantArt is an app that houses creative outlets to express one's artistic
 Check it out here (working live demo)! [NotSoDeviantArt.com](https://not-so-deviant-art.herokuapp.com/#/)
 
 ## Technologies and Tools Used
+* **React and Redux** - A very capable and powerful frontend-tool to display in the frontend and get requests from the backend.
 * **Ruby Version**: 5.2.3
 * **npm + webpack**
 * **Ruby on Rails** - Rails is a great backend system that allows:
   * Handling over user authentication and server session.
   * Giving great control over routes and managing what requests come in and what goes out
-* **React and Redux** - A very capable and powerful frontend-tool to display in the frontend and get requests from the backend.
 * **PostgreSQL** - PostgreSQL is a powerful open source object-relational database that utilizes SQL language effectiviely and helpfully. 
 * **AWS S3** - Allows for online storage of images and file types on the web as cloud storage instead having to use local space.
 * **Heroku** - Used as the hosting service for the App. 
 
 **Laguages used:**
 * Ruby
+* HTML5
+* SCSS
 * Javascript
 
 ## Site
@@ -39,8 +41,6 @@ For CSS, this app uses mainly SCSS app look and feel really smooth as well as gi
 ![alt text](https://github.com/danchau88/NotSoDeviantArt/blob/master/app/assets/images/CSS_snippet.PNG "CSS_snippet")
 
 ### Future direction/installments
-* upload deviations
-* editing and removing comments and deviations
-* favorites and likes
-* user show page
+* Likes (comments/deviations)
+* Replies (comments)
 
