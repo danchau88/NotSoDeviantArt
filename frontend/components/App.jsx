@@ -78,8 +78,8 @@ class App extends React.Component {
           <Switch>
             <Route path="/deviations/:id" component={DeviationShowContainer} />
             <Route path="/users/:id" component={UserShowContainer} />
-            <Route path="/mypage" component={PersonalPageContainer} />
-            <Route path="/myfavorites" component={FavoritesPageContainer} />
+            <ProtectedRoute path="/mypage" component={PersonalPageContainer} />
+            <ProtectedRoute path="/myfavorites" component={FavoritesPageContainer} />
             <Route path="/comments/:id/edit" component={EditCommentContainer} />
             <ProtectedRoute path="/create/deviation" component={deviationCreateContainer} />
             <AuthRoute path="/login" component={LoginFormContainer} />
