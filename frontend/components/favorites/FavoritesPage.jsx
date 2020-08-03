@@ -8,9 +8,15 @@ export default class FavoritesPage extends React.Component {
   }
   
   render() {
-
     const { currentUser, favorites, deviations, destroyFavorite } = this.props;
-    if (!currentUser || !favorites || !deviations) {return <div></div>}
+    if (!currentUser || !favorites || !deviations) return (
+      <div className='loader'>
+        <div className="loadingio-spinner-bean-eater-916qsk75w7e"><div className="ldio-c4ah9yqoipt">
+        <div><div></div><div></div><div></div></div><div><div></div><div></div><div></div></div>
+        </div></div>
+      </div>
+    )
+    
     let favoriteItems = favorites.map((favorite) => (
       <FavoriteItem key={favorite.id} 
         favorite={favorite} 
