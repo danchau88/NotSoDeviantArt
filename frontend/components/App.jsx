@@ -28,13 +28,13 @@ class App extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      randomInteger: randomInteger(62,102), //change for explore button (based on deviation numbers) UPDATE THIS
+      randomInteger: randomInteger(62,104), //change for explore button (based on deviation numbers) UPDATE THIS
     };
     this.randomDeviationId = this.randomDeviationId.bind(this);
   }
 
   randomDeviationId() {
-    this.setState({randomInteger: randomInteger(62, 102)}) //change for explore button (based on deviation numbers) UPDATE THIS
+    this.setState({randomInteger: randomInteger(62, 104)}) //change for explore button (based on deviation numbers) UPDATE THIS
   }
 
   render() {
@@ -66,11 +66,9 @@ class App extends React.Component {
               </div>
             </div>
           </header>
-
           <div className='search-nav'>
             <Route path="/" component={SearchContainer} />
           </div>
-
           <Route className='nav-right' path='/' component={HomeContainer} />
         </div>
 

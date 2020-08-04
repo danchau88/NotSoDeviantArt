@@ -7,7 +7,10 @@ export default ({currentUser, logout}) => {
            <Link to='/mypage'>
                 <h3><i className="fas fa-user-ninja"></i>{currentUser.username}</h3>
            </Link>
-           <div className='dropdown-content'>     
+           <div className='dropdown-content'>   
+                <button className='drop-button'>
+                <Link to='/mypage'>MY PROFILE</Link>
+                </button>   
                 <button className='drop-button' onClick={logout}>
                 <Link to='/'>LOG OUT</Link>
                 </button>     
