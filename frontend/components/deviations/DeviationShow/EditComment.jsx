@@ -11,6 +11,7 @@ export default class EditComment extends React.Component {
       deviation_id: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleExit = this.handleExit.bind(this);
   }
   componentWillReceiveProps(props) {
     if (props.comment) {     //fixes the undefined problem
@@ -37,6 +38,10 @@ export default class EditComment extends React.Component {
     this.props.history.goBack()
   }
 
+  handleExit() {
+    this.props.history.goBack()
+  }
+
   render(){
     return (
       <div className='edit-bg'>
@@ -45,6 +50,9 @@ export default class EditComment extends React.Component {
             <textarea value={this.state.body} onChange={this.handleInput('body')}></textarea>
             <button className="edit-comment-btn">SAVE</button>
           </form>
+         
+          <span className="edit-exit" onClick={this.handleExit}>x</span>
+
         </div>
       </div>
     )

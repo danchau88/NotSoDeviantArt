@@ -16,6 +16,7 @@
 }
 
 .edit-comment-form {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -47,3 +48,19 @@
 .edit-comment-btn:hover {
   color: $translucent-light-green;
 }
+
+.edit-exit {
+  font-family: cursive;
+  font-weight: bolder;
+  font-size: 30px;
+  position: absolute;
+  color: $gray-aqua;
+  top: 120px;
+  right: 200px;
+}
+
+.edit-exit:hover {
+  color: $kinda-white;
+  cursor: pointer;
+}
+
