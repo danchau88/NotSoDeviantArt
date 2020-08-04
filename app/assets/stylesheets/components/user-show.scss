@@ -30,9 +30,23 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.user-devs img {
-  height: 250px;
+.user-show-img {
+  height: 400px;
   margin-bottom: 5px;
+}
+
+.user-devs {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.user-dev {
+  display: flex;
+  flex-direction: column;
+  margin: 8px;
 }
 
 .none-yet {

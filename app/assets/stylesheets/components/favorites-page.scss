@@ -5,6 +5,10 @@
   align-items: center;
 }
 
+.fav-content ul {
+  list-style: none;
+}
+
 .fav-item {
   display: flex;
   flex-direction: column;

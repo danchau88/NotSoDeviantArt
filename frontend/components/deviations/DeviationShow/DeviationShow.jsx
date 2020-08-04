@@ -2,7 +2,7 @@ import React from 'react';
 import CommentForm from './CommentForm';
 import CommentItem from './CommentItem';
 import { Link } from 'react-router-dom';
-// import FullImage from './FullImage';
+
 
 class DeviationShow extends React.Component{
 
@@ -61,6 +61,8 @@ class DeviationShow extends React.Component{
         };
 
         let favoriteStatus;
+        if (!currentUser) {favoriteStatus = <div></div>}
+        else { 
           favorited === false ? 
             favoriteStatus = 
               <button onClick={() => createFavorite({deviation_id: deviation.id, user_id: currentUser.id})}>
@@ -70,12 +72,15 @@ class DeviationShow extends React.Component{
               <button onClick={() => deleteFavorite({deviation_id: deviation.id, user_id: currentUser.id})}>
                 <i className="fas fa-star"></i>{` ADD TO FAVORITES`}
               </button>
+        }
 
         return(
             <div className='dev-show'>
 
                 <div className='img-block'>
-                <img src={deviation.artworkUrl} />
+                  <a target="_blank" href={deviation.artworkUrl}>
+                    <img src={deviation.artworkUrl} />
+                  </a>
                 </div>
 
                 <div className='options-bar'>

@@ -13,9 +13,9 @@ class UserShow extends React.Component {
     let deviationItems;
       deviationItems = deviations.map((deviation) => {
         if (user.id === deviation.artist_id) {
-          return <li key={deviation.id}>
+          return <li className="user-dev" key={deviation.id}>
             <h4><Link to={`/deviations/${deviation.id}`}>{deviation.title}</Link></h4>
-            <Link to={`/deviations/${deviation.id}`}><img src={deviation.artworkUrl} /></Link>
+            <Link to={`/deviations/${deviation.id}`}><img className="user-show-img" src={deviation.artworkUrl} /></Link>
           </li>
         }
       })

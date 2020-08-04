@@ -1,25 +1,48 @@
 .personal-page {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.personal-page h1 {
+.user-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: $kinda-white;
   font-family: 'Odibee Sans', cursive;
   background-color: $dirty-dark-aqua;
   letter-spacing: 2px;
   padding: 10px;
+  width: 100%;
+}
+
+.personal-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $blue-lavender;
+  font-family: 'Kanit', sans-serif;
+  font-size: 24px;
 }
 
 .personal-page h4 {
+  font-size: 18px;
   color: $kinda-white;
 }
 
-.personal-page li {
+.personal-li {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  align-items: center;
+  justify-content: center;
+}
+
+.personal-img {
+  height: 500px;
+  width: auto;
 }
 
 .top-bar {
@@ -39,9 +62,11 @@
   border: none;
   font-family: 'Kanit', sans-serif;
   color: $readable-gray;
+  font-size: 16px;
   background-color: transparent;
 }
 
 .delete-dev:hover {
   color: $kinda-red;
+  cursor: pointer;
 }

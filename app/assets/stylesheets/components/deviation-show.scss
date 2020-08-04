@@ -8,12 +8,20 @@
     margin-left: 5%;
 }
 
+.dev-show a {
+  cursor: zoom-in;
+}
+
 .dev-show img {
     display: flex;
     width: auto;
     height: 650px;
     object-fit: cover;
     margin-right: 50px;
+}
+
+.dev-show img:hover {
+  cursor: zoom-in;
 }
 
 .dev-show h2{

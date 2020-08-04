@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default class FavoriteItem extends React.Component {
   render() {
@@ -8,7 +9,9 @@ export default class FavoriteItem extends React.Component {
       <li className="fav-item">
         <div>
           <h4 className='fav-item-title'>{favorite_deviation.title}</h4>
-          <img src={favorite_deviation.artworkUrl} />
+          <Link to={`/deviations/${favorite_deviation.id}`} >
+            <img src={favorite_deviation.artworkUrl} />
+          </Link>
         </div>
         <button onClick={() => {
             destroyFavorite({deviation_id: favorite_deviation.id, user_id: currentUser.id}) //params naming from backend
