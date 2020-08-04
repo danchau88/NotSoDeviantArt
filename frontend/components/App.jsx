@@ -28,13 +28,13 @@ class App extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      randomInteger: randomInteger(11,51),
+      randomInteger: randomInteger(62,102), //change for explore button (based on deviation numbers) UPDATE THIS
     };
     this.randomDeviationId = this.randomDeviationId.bind(this);
   }
 
   randomDeviationId() {
-    this.setState({randomInteger: randomInteger(11, 51)})
+    this.setState({randomInteger: randomInteger(62, 102)}) //change for explore button (based on deviation numbers) UPDATE THIS
   }
 
   render() {
