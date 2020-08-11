@@ -4,15 +4,16 @@
   flex-direction: column;
 }
 
-.user-show h2 {
+.show-username {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 10px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border-bottom: 1px solid $barely-gray;
 }
 
-.user-show h2 .fa-circle {
+.show-username .fa-circle {
   color: red;
   font-size: 18px;
   margin-left: 3px;

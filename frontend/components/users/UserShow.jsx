@@ -22,7 +22,7 @@ class UserShow extends React.Component {
     if (deviationItems.length === 0) {deviationItems = <h1 className="none-yet">No Deviations Yet...</h1>};
     return (
       <div className="user-show">
-        <h2>{user.username}
+        <h2 className="show-username">{user.username}
           <span className="fa-stack">
             <i className="fas fa-circle fa-stack-2x"></i>
             <i className="fas fa-star fa-stack-1x fa-inverse"></i>
