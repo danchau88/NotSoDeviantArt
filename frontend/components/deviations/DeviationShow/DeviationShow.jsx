@@ -63,7 +63,11 @@ class DeviationShow extends React.Component{
         };
 
         let favoriteStatus;
-        if (!currentUser) {favoriteStatus = <div></div>}
+        if (!currentUser) {favoriteStatus = 
+          <div className="login-req">
+            <h3 className="like-this">Like This?</h3>
+            <span> <Link to='/login'>Login</Link> / <Link to='/signup'>Signup</Link> to favorite and comment.</span>
+          </div>}
         else { 
           favorited === false ? 
             favoriteStatus = 
