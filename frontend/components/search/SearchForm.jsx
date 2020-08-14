@@ -33,7 +33,7 @@ class SearchForm extends React.Component {
                         placeholder="Deviation title..." 
                         onChange={this.handleInput}
                     />
-                    <button className='nav-button'>SEARCH</button>
+                    {/* <button className='nav-button'>SEARCH</button> */}
                 </form>
             </div>
         )
